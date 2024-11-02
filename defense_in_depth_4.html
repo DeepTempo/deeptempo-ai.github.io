@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Defense in Depth Animation - Waves of Attacks</title>
+    <style>
+        /* Basic styling */
+        body {
+            margin: 0;
+            background-color: #1a1a1a;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            position: relative;
+            color: #fff;
+        }
+
+        /* Container for points and text */
+        .container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        /* Text overlays with z-index to stay on top */
+        .text-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2em;
+            color: #ffffff;
+            opacity: 0;
+            z-index: 10;
+        }
+
+        .text1 {
+            animation: fadeIn 2s forwards, fadeOut 2s 6s forwards;
+            /* Fade-in, hold for 4s, fade-out */
+        }
+
+        .text2 {
+            animation: fadeIn 2s 7s forwards, fadeOut 2s 11s forwards;
+            /* Appear after text1 fades out */
+        }
+
+        .text3 {
+            animation: fadeIn 2s 12s forwards, fadeOut 2s 16s forwards;
+            /* Appear after text2 fades out */
+        }
+
+        .text4 {
+            animation: fadeIn 2s 17s forwards, fadeOut 2s 21s forwards;
+            /* Appear after text3 fades out */
+        }
+
+        .final-text {
+            animation: fadeIn 2s 22s forwards;
+            /* Final text stays on screen */
+            font-size: 1.5em;
+            max-width: 80%;
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        /* Point styling */
+        .point {
+            position: absolute;
+            background-color: gray;
+            opacity: 0;
+            z-index: 1;
+            animation: fadeIn 2s forwards;
+            /* Points fade in */
+        }
+
+        /* Tag styling */
+        .tag {
+            position: absolute;
+            top: -20px;
+            /* Position tag above the point */
+            font-size: 10px;
+            color: #00ffff;
+            opacity: 0;
+            animation: tagAppear 2s ease-in-out forwards;
+            /* Tag fades in and out */
+        }
+
+        /* Red point styling for attacks */
+        .attack-hit {
+            background-color: red !important;
+        }
+
+        /* MITRE ATT&CK tag styling */
+        .attack-tag {
+            position: absolute;
+            top: -20px;
+            font-size: 10px;
+            color: yellow;
+            opacity: 0;
+            animation: tagAppear 3s forwards;
+        }
+
+        /* Variations in shapes and sizes */
+        .circle {
+            border-radius: 50%;
+        }
+
+        .square {
+            /* Squares remain as they are */
+        }
+
+        .triangle {
+            width: 0;
+            height: 0;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-bottom: 10px solid gray;
+            background: none;
+        }
+
+        /* Sizes */
+        .small {
+            width: 5px;
+            height: 5px;
+        }
+
+        .medium {
+            width: 8px;
+            height: 8px;
+        }
+
+        .large {
+            width: 12px;
+            height: 12px;
+        }
+
+        /* Keyframes for fade animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        /* Animation for tag appearance */
+        @keyframes tagAppear {
+            0% {
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            80% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="container">
+        <!-- Points will appear in this container -->
+
+        <!-- Text Overlays -->
+        <div class="text-overlay text1">Attack Surfaces are Multiplying</div>
+        <div class="text-overlay text2">It is almost inevitable you will be breached.</div>
+        <div class="text-overlay text3">Perimeter security and rules and ML based systems are not keeping up.</div>
+        <div class="text-overlay text4">According to Forrester's 2023 Security Survey, 77% of security decision-makers
+            reported experiencing at least one breach at their firm over the past 12 months.</div>
+        <div class="text-overlay final-text">
+            <p>DeepTempo uses Deep Learning to see abnormal behavior by anything on your network.</p>
+            <p>Abnormal patterns are compared to Mitre Att&ck patterns - and can be white list allowed.</p>
+            <p>These indicators also include info on impacted entities - that your SOC uses to triage and respond. </p>
+            <p>Use defense in depth from DeepTempo to contain and respond to the attackers before they do real damage.
+            </p>
+            <p><img src="your-logo-url.png" alt="DeepTempo Logo" width="100" /></p>
+        </div>
+    </div>
+
+    <script>
+        const numPoints = 200;
+        const container = document.getElementById('container');
+        const tags = ["DB", "email server", "exec laptop", "firewall", "webserver"];
+        const attackPatterns = ["T1566.001", "T1587.001", "T1071.004", "T1021.001", "T1560.001"];
+
+        // Function to create and display a point with a possible tag
+        function createPoint(showTag, persistentTag = false) {
+            const point = document.createElement('div');
+            point.classList.add('point');
+
+            // Random position
+            point.style.top = Math.random() * 100 + '%';
+            point.style.left = Math.random() * 100 + '%';
+
+            // Random shape and size
+            const shapes = ['circle', 'square', 'triangle'];
+            const randomShape = shapes[Math.floor(Math.random() * shapes.length)];
+            point.classList.add(randomShape);
+
+            const sizes = ['small', 'medium', 'large'];
+            const randomSize = sizes[Math.floor(Math.random() * sizes.length)];
+            point.classList.add(randomSize);
+
+            // Append point to container
+            container.appendChild(point);
+
+            // Display tag if showTag is true
+            if (showTag) {
+                const tag = document.createElement('div');
+                tag.classList.add('tag');
+                tag.textContent = tags[Math.floor(Math.random() * tags.length)];
+                point.appendChild(tag);
+
+                // Keep last wave's tags persistent
+                if (!persistentTag) {
+                    setTimeout(() => point.removeChild(tag), 2000);
+                }
+            }
+
+            return point;
+        }
+
+        // Create points and trigger tags in three groups, keeping the last wave persistent
+        function createPointsWithTags() {
+            // First wave of points with tags
+            for (let i = 0; i < numPoints / 3; i++) {
+                createPoint(true);
+            }
+
+            // Second wave of points with tags after 3 seconds
+            setTimeout(() => {
+                for (let i = 0; i < numPoints / 3; i++) {
+                    createPoint(true);
+                }
+            }, 3000);
+
+            // Third wave of points with persistent tags after 6 seconds
+            setTimeout(() => {
+                for (let i = 0; i < numPoints / 3; i++) {
+                    createPoint(true, true);
+                }
+            }, 6000);
+        }
+
+        // Initial point creation without tags
+        for (let i = 0; i < numPoints; i++) {
+            createPoint(false);
+        }
+
+        // Trigger the three waves of tags
+        createPointsWithTags();
+
+        // Function to trigger attack animations
+        function startAttacks() {
+            const points = document.querySelectorAll('.point');
+            points.forEach((point) => {
+                if (Math.random() < 0.1) { // 10% chance to turn point red
+                    point.classList.add('attack-hit');
+
+                    // Add MITRE ATT&CK tag with a 20% chance
+                    if (Math.random() < 0.2) {
+                        const attackTag = document.createElement('div');
+                        attackTag.classList.add('attack-tag');
+                        attackTag.textContent = attackPatterns[Math.floor(Math.random() * attackPatterns.length)];
+                        point.appendChild(attackTag);
+
+                        setTimeout(() => point.removeChild(attackTag), 3000);
+                    }
+
+                    setTimeout(() => point.classList.remove('attack-hit'), 5000); // Reset red color after 5 seconds
+                }
+            });
+        }
+
+        // Start attack animations after the "It is almost inevitable..." text appears
+        setTimeout(() => setInterval(startAttacks, 3000), 7000);
+    </script>
+</body>
+
+</html>
