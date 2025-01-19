@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DeepTempo + Snowflake</title>
 
-  <!-- Fonts & CSS from your main site -->
+  <!-- Use the same fonts & CSS as your main site -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
   >
 
-  <!-- Google Analytics / Tag -->
+  <!-- Google Analytics / Tag (adjust your ID if needed) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9EGVJW1TZT"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -27,7 +27,7 @@
     gtag('config', 'G-9EGVJW1TZT');
   </script>
 
-  <!-- HubSpot Tracking -->
+  <!-- HubSpot Tracking (adjust your Portal ID if needed) -->
   <script
     type="text/javascript"
     id="hs-script-loader"
@@ -36,97 +36,60 @@
     src="//js.hs-scripts.com/48299015.js"
   ></script>
 
-  <!-- Optional inline CSS for the new hero and adjusted video ratio -->
+  <!-- Inline CSS for the new diagonal hero, video, value props, etc. -->
   <style>
-    /* Hero container that spans full width */
+    /* Basic reset if needed (optional) */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* NAVBAR, FOOTER, etc. 
+       You can rely on your existing style.css for general styling 
+       or override here if needed. */
+
+    /* DIAGONAL HERO SECTION */
     .hero-split {
       position: relative;
       width: 100%;
       min-height: 60vh; /* Adjust as needed */
-      overflow: hidden;
+      /* 45deg diagonal split, half red & half blue at 50% */
+      background: linear-gradient(45deg, #d60000 50%, #29B5E8 50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
     }
-
-    /* 
-      We'll position two backgrounds side-by-side:
-      1) Left background (DeepTempo style)
-      2) Right background (Snowflake pattern)
-    */
-    .hero-split::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 50%;
-      height: 100%;
-      /* Use your original background from the homepage 
-         or any image/gradient you prefer. 
-         If your existing hero was mostly black with a subtle pattern, 
-         you can replicate that here. Example: 
-      */
-      background: url("img/header-bg.jpg") center/cover no-repeat; 
-      /* If it was just black or a gradient, do:
-         background: linear-gradient(135deg, #ff0000, #000000);
-      */
-      z-index: 1;
-    }
-
-    .hero-split::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 50%;
-      width: 50%;
-      height: 100%;
-      /*
-        Subtle Snowflake pattern: 
-        Replace "snowflake-pattern.png" with an actual 
-        small repeating pattern or a large, softly tinted image.
-      */
-      background: url("img/snowflake-pattern.png") center/cover no-repeat; 
-      opacity: 0.2; /* Subtle effect */
-      z-index: 1;
-    }
-
-    /* Container for the hero text so it sits over the backgrounds */
     .hero-content {
-      position: relative;
-      z-index: 2; /* Above the pseudo-elements */
+      color: #fff; /* White text stands out on red & blue */
       max-width: 1200px;
       margin: 0 auto;
       padding: 4rem 2rem;
-      text-align: center;
-      color: #fff; /* Over dark background or the pattern */
     }
-
     .hero-content h1 {
       font-size: 3rem;
       margin-bottom: 1rem;
     }
-
     .hero-content p.hero-tagline {
       font-size: 1.5rem;
       line-height: 1.4;
       margin-bottom: 2rem;
-      font-weight: 600; /* Make it stand out */
-      color: #ffffff;
+      font-weight: 600;
     }
 
-    /* Larger, more horizontal video */
+    /* VIDEO SECTION */
     .video-section {
       text-align: center;
       padding: 4rem 2rem;
-      background-color: #f9f9f9; /* or keep it white */
-    }
-    .video-section h2 {
-      margin-bottom: 2rem;
+      background-color: #f9f9f9; /* or #fff, your choice */
     }
     .video-wrapper {
-      max-width: 960px; 
-      margin: 0 auto; 
+      max-width: 960px;
+      margin: 0 auto;
       position: relative;
-      /* Make it more horizontal by reducing the height ratio
-         45% for a 'wider' look (instead of 56.25%) */
-      padding-bottom: 45%; 
+      /* more horizontal ratio => 45% is wider than standard 16:9 (56.25%) */
+      padding-bottom: 45%;
       height: 0;
     }
     .video-wrapper iframe {
@@ -137,10 +100,13 @@
       top: 0;
     }
 
-    /* Value Proposition Icons */
+    /* JOINT VALUE PROP SECTION */
     .value-prop-section {
       padding: 4rem 2rem;
       background: #ffffff;
+    }
+    .value-prop-section .u-center-text {
+      margin-bottom: 2rem;
     }
     .value-prop-cards {
       display: grid;
@@ -155,6 +121,7 @@
       border-radius: 8px;
       padding: 2rem;
       transition: box-shadow 0.2s;
+      background: #fff;
     }
     .value-prop-card:hover {
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -162,7 +129,7 @@
     .value-prop-icon {
       font-size: 3rem;
       margin-bottom: 1rem;
-      color: #d60000; /* Or any accent color from your brand */
+      color: #d60000; /* accent color, or #29B5E8 if you prefer */
     }
     .value-prop-title {
       font-size: 1.25rem;
@@ -174,11 +141,30 @@
       line-height: 1.4;
       color: #333;
     }
+
+    /* HUBSPOT FORM SECTION */
+    .section-book {
+      padding: 4rem 2rem;
+      background: #fafafa;
+    }
+    .book__form {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .u-margin-bottom-medium {
+      margin-bottom: 2rem;
+    }
+    .heading-secondary {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #333;
+    }
   </style>
 </head>
 
 <body>
-  <!-- NAVBAR (same structure as index.html) -->
+  <!-- NAVIGATION BAR (sample structure similar to your index.html) -->
   <header class="navbar">
     <div class="navbar__logo">
       <img src="img/logo-full-color.png" alt="DeepTempo Logo">
@@ -200,7 +186,7 @@
     </nav>
   </header>
 
-  <!-- SPLIT HERO SECTION with single text container -->
+  <!-- DIAGONAL HERO SECTION -->
   <section class="hero-split">
     <div class="hero-content">
       <h1>DeepTempo + Snowflake</h1>
@@ -210,9 +196,8 @@
     </div>
   </section>
 
-  <!-- VIDEO SECTION -->
+  <!-- VIDEO SECTION (No extra heading) -->
   <section class="video-section">
-    <h2>See Our Integration in Action</h2>
     <div class="video-wrapper">
       <iframe
         src="https://www.youtube.com/embed/meaxmFGyep4?si=RmIJuR1Mm9K2tUEQ"
@@ -222,9 +207,9 @@
     </div>
   </section>
 
-  <!-- JOINT VALUE PROPOSITION (Icon-based) -->
+  <!-- JOINT VALUE PROPOSITION -->
   <section class="value-prop-section">
-    <div class="u-center-text u-margin-bottom-big">
+    <div class="u-center-text">
       <h2 class="heading-secondary">Joint Value Proposition</h2>
     </div>
     <div class="value-prop-cards">
@@ -236,40 +221,36 @@
           Save 80% or more on ingestion and operational costs by filtering out noise before it hits your SIEM.
         </p>
       </div>
-
       <!-- 2) Improved Detections -->
       <div class="value-prop-card">
         <i class="fas fa-shield-alt value-prop-icon"></i>
         <div class="value-prop-title">Improved Detections</div>
         <p class="value-prop-desc">
-          Identify attacks that rules &amp; traditional ML can’t spot, thanks to DeepTempo’s advanced deep learning model.
+          Identify attacks that rules &amp; ML systems can’t discern, thanks to deep learning.
         </p>
       </div>
-
       <!-- 3) Simple Operations -->
       <div class="value-prop-card">
         <i class="fas fa-cogs value-prop-icon"></i>
         <div class="value-prop-title">Simple Operations</div>
         <p class="value-prop-desc">
-          Runs natively on Snowflake, scaling seamlessly. Pushes indicators &amp; context directly into your SIEM.
+          Scales on Snowflake. Feeds alerts &amp; indicators into your SIEM for streamlined workflows.
         </p>
       </div>
-
       <!-- 4) Proven at Scale -->
       <div class="value-prop-card">
         <i class="fas fa-chart-line value-prop-icon"></i>
         <div class="value-prop-title">Proven at Scale</div>
         <p class="value-prop-desc">
-          Developed alongside a tier one financial institution—capable of handling massive log volumes.
+          Developed with a tier-one financial institution, handling massive log volumes seamlessly.
         </p>
       </div>
-
       <!-- 5) Per Usage Economics -->
       <div class="value-prop-card">
         <i class="fas fa-coins value-prop-icon"></i>
         <div class="value-prop-title">Per Usage Economics</div>
         <p class="value-prop-desc">
-          Try for free via your Snowflake account. Upgrade to an unlimited plan directly from DeepTempo.
+          Try for free. Pay via your Snowflake account or opt for unlimited plans from DeepTempo.
         </p>
       </div>
     </div>
@@ -277,35 +258,27 @@
 
   <!-- HUBSPOT FORM SECTION -->
   <section class="section-book">
-    <div class="row">
-      <div class="book">
-        <div class="book__form">
-          <div class="u-margin-bottom-medium">
-            <h2 class="heading-secondary">
-              Register Now to Access a Free Trial on Snowflake
-            </h2>
-          </div>
-
-          <!-- HubSpot Form Embed
-               1) Ensure your HubSpot form has a checkbox 
-                  "Schedule a time to meet with DeepTempo"
-               2) Replace YOUR_PORTAL_ID & YOUR_FORM_ID with actual IDs -->
-          <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/shell.js"></script>
-          <script>
-            hbspt.forms.create({
-              region: "na1",
-              portalId: "YOUR_PORTAL_ID",
-              formId: "YOUR_FORM_ID",
-              target: "#hubspot-form-container"
-            });
-          </script>
-          <div id="hubspot-form-container"></div>
-        </div>
+    <div class="book__form">
+      <div class="u-margin-bottom-medium">
+        <h2 class="heading-secondary">
+          Register Now to Access a Free Trial on Snowflake
+        </h2>
       </div>
+      <!-- HubSpot Form Embed (Replace with your real portalId & formId) -->
+      <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/shell.js"></script>
+      <script>
+        hbspt.forms.create({
+          region: "na1",
+          portalId: "YOUR_PORTAL_ID",
+          formId: "YOUR_FORM_ID",
+          target: "#hubspot-form-container"
+        });
+      </script>
+      <div id="hubspot-form-container"></div>
     </div>
   </section>
 
-  <!-- FOOTER (same as index.html) -->
+  <!-- FOOTER (similar to index.html) -->
   <footer class="footer">
     <div class="row">
       <div class="col-1-of-2">
@@ -352,3 +325,4 @@
   </script>
 </body>
 </html>
+
