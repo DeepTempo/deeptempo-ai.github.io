@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DeepTempo + Snowflake</title>
-  
+
   <!-- Fonts & CSS from your main site -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="shortcut icon" type="image/png" href="img/favicon.png">
 
-  <!-- Font Awesome (same as index) -->
+  <!-- Font Awesome for icons -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -36,52 +36,82 @@
     src="//js.hs-scripts.com/48299015.js"
   ></script>
 
-  <!-- Optional inline CSS to demonstrate the split hero -->
+  <!-- Optional inline CSS for the new hero and adjusted video ratio -->
   <style>
-    /* Split hero container */
+    /* Hero container that spans full width */
     .hero-split {
-      display: flex;
+      position: relative;
       width: 100%;
       min-height: 60vh; /* Adjust as needed */
-    }
-    /* Left side: DeepTempo colors (example: black background w/ red accent) */
-    .hero-left {
-      flex: 1;
-      background: #000; /* or a gradient if desired */
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 3rem 2rem;
-      text-align: center;
-    }
-    /* Right side: Snowflake color (light or brand color) */
-    .hero-right {
-      flex: 1;
-      background: #29B5E8; /* Snowflake-like brand color */
-      /* Or consider using a background image from Snowflake’s site, 
-         but be mindful of usage rights. */
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 3rem 2rem;
-    }
-    /* Headline & tagline styles */
-    .hero-left h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-    .hero-tagline {
-      font-size: 1.25rem;
-      color: #fff;
-      margin-bottom: 0;
-      max-width: 480px;
-      line-height: 1.4;
+      overflow: hidden;
     }
 
-    /* Larger, centered video section */
+    /* 
+      We'll position two backgrounds side-by-side:
+      1) Left background (DeepTempo style)
+      2) Right background (Snowflake pattern)
+    */
+    .hero-split::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      /* Use your original background from the homepage 
+         or any image/gradient you prefer. 
+         If your existing hero was mostly black with a subtle pattern, 
+         you can replicate that here. Example: 
+      */
+      background: url("img/header-bg.jpg") center/cover no-repeat; 
+      /* If it was just black or a gradient, do:
+         background: linear-gradient(135deg, #ff0000, #000000);
+      */
+      z-index: 1;
+    }
+
+    .hero-split::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 50%;
+      height: 100%;
+      /*
+        Subtle Snowflake pattern: 
+        Replace "snowflake-pattern.png" with an actual 
+        small repeating pattern or a large, softly tinted image.
+      */
+      background: url("img/snowflake-pattern.png") center/cover no-repeat; 
+      opacity: 0.2; /* Subtle effect */
+      z-index: 1;
+    }
+
+    /* Container for the hero text so it sits over the backgrounds */
+    .hero-content {
+      position: relative;
+      z-index: 2; /* Above the pseudo-elements */
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+      text-align: center;
+      color: #fff; /* Over dark background or the pattern */
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-content p.hero-tagline {
+      font-size: 1.5rem;
+      line-height: 1.4;
+      margin-bottom: 2rem;
+      font-weight: 600; /* Make it stand out */
+      color: #ffffff;
+    }
+
+    /* Larger, more horizontal video */
     .video-section {
       text-align: center;
       padding: 4rem 2rem;
@@ -91,10 +121,12 @@
       margin-bottom: 2rem;
     }
     .video-wrapper {
-      max-width: 800px; 
+      max-width: 960px; 
       margin: 0 auto; 
       position: relative;
-      padding-bottom: 56.25%; /* 16:9 ratio */
+      /* Make it more horizontal by reducing the height ratio
+         45% for a 'wider' look (instead of 56.25%) */
+      padding-bottom: 45%; 
       height: 0;
     }
     .video-wrapper iframe {
@@ -103,6 +135,44 @@
       height: 100%;
       left: 0;
       top: 0;
+    }
+
+    /* Value Proposition Icons */
+    .value-prop-section {
+      padding: 4rem 2rem;
+      background: #ffffff;
+    }
+    .value-prop-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .value-prop-card {
+      text-align: center;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      padding: 2rem;
+      transition: box-shadow 0.2s;
+    }
+    .value-prop-card:hover {
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .value-prop-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #d60000; /* Or any accent color from your brand */
+    }
+    .value-prop-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .value-prop-desc {
+      font-size: 1rem;
+      line-height: 1.4;
+      color: #333;
     }
   </style>
 </head>
@@ -130,20 +200,13 @@
     </nav>
   </header>
 
-  <!-- SPLIT HERO SECTION -->
+  <!-- SPLIT HERO SECTION with single text container -->
   <section class="hero-split">
-    <!-- LEFT (DeepTempo) -->
-    <div class="hero-left">
+    <div class="hero-content">
       <h1>DeepTempo + Snowflake</h1>
       <p class="hero-tagline">
         Superior cyber security available now from the Snowflake NativeApp marketplace
       </p>
-    </div>
-
-    <!-- RIGHT (Snowflake brand color or image) -->
-    <div class="hero-right">
-      <!-- Optionally place a Snowflake or co-branded graphic/logo here -->
-      <!-- For now, it's just a color background -->
     </div>
   </section>
 
@@ -151,7 +214,6 @@
   <section class="video-section">
     <h2>See Our Integration in Action</h2>
     <div class="video-wrapper">
-      <!-- Larger, centered video embed -->
       <iframe
         src="https://www.youtube.com/embed/meaxmFGyep4?si=RmIJuR1Mm9K2tUEQ"
         frameborder="0"
@@ -160,25 +222,55 @@
     </div>
   </section>
 
-  <!-- JOINT VALUE PROPOSITION -->
-  <section class="section-about">
+  <!-- JOINT VALUE PROPOSITION (Icon-based) -->
+  <section class="value-prop-section">
     <div class="u-center-text u-margin-bottom-big">
       <h2 class="heading-secondary">Joint Value Proposition</h2>
     </div>
-    <div class="row">
-      <div class="col-1-of-1">
-        <p class="paragraph">
-          By combining DeepTempo’s advanced deep learning LogLM with Snowflake’s secure, scalable data platform, 
-          organizations can dramatically improve <strong>threat detection accuracy</strong>, 
-          reduce <strong>SIEM costs</strong>, and identify security incidents with <strong>relevant context</strong>. 
-          You’ll:
+    <div class="value-prop-cards">
+      <!-- 1) Cost Savings -->
+      <div class="value-prop-card">
+        <i class="fas fa-piggy-bank value-prop-icon"></i>
+        <div class="value-prop-title">Cost Savings</div>
+        <p class="value-prop-desc">
+          Save 80% or more on ingestion and operational costs by filtering out noise before it hits your SIEM.
         </p>
-        <ul class="paragraph">
-          <li>Save on ingestion costs by filtering noise before sending to your SIEM.</li>
-          <li>Improve accuracy with advanced deep learning across massive datasets.</li>
-          <li>Identify high-priority incidents plus the contextual data you need to respond.</li>
-          <li>Leverage Snowflake’s NativeApp marketplace for quick deployment.</li>
-        </ul>
+      </div>
+
+      <!-- 2) Improved Detections -->
+      <div class="value-prop-card">
+        <i class="fas fa-shield-alt value-prop-icon"></i>
+        <div class="value-prop-title">Improved Detections</div>
+        <p class="value-prop-desc">
+          Identify attacks that rules &amp; traditional ML can’t spot, thanks to DeepTempo’s advanced deep learning model.
+        </p>
+      </div>
+
+      <!-- 3) Simple Operations -->
+      <div class="value-prop-card">
+        <i class="fas fa-cogs value-prop-icon"></i>
+        <div class="value-prop-title">Simple Operations</div>
+        <p class="value-prop-desc">
+          Runs natively on Snowflake, scaling seamlessly. Pushes indicators &amp; context directly into your SIEM.
+        </p>
+      </div>
+
+      <!-- 4) Proven at Scale -->
+      <div class="value-prop-card">
+        <i class="fas fa-chart-line value-prop-icon"></i>
+        <div class="value-prop-title">Proven at Scale</div>
+        <p class="value-prop-desc">
+          Developed alongside a tier one financial institution—capable of handling massive log volumes.
+        </p>
+      </div>
+
+      <!-- 5) Per Usage Economics -->
+      <div class="value-prop-card">
+        <i class="fas fa-coins value-prop-icon"></i>
+        <div class="value-prop-title">Per Usage Economics</div>
+        <p class="value-prop-desc">
+          Try for free via your Snowflake account. Upgrade to an unlimited plan directly from DeepTempo.
+        </p>
       </div>
     </div>
   </section>
@@ -190,40 +282,24 @@
         <div class="book__form">
           <div class="u-margin-bottom-medium">
             <h2 class="heading-secondary">
-              Register Now for a Free Snowflake Trial
+              Register Now to Access a Free Trial on Snowflake
             </h2>
           </div>
 
-          <!-- HubSpot Form Embed -->
-          <!-- 1) Create/Modify your form in HubSpot to include:
-                 - Email field
-                 - Checkbox: "Schedule a time to meet with DeepTempo"
-                 2) Copy the embed code below and replace with YOUR actual Portal ID & Form ID -->
-
+          <!-- HubSpot Form Embed
+               1) Ensure your HubSpot form has a checkbox 
+                  "Schedule a time to meet with DeepTempo"
+               2) Replace YOUR_PORTAL_ID & YOUR_FORM_ID with actual IDs -->
           <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/shell.js"></script>
           <script>
             hbspt.forms.create({
               region: "na1",
-              portalId: "YOUR_PORTAL_ID",     // e.g., "48299015"
-              formId: "YOUR_FORM_ID",        // e.g., "abcd1234-ab12-cd34-ef56-1234567890ab"
-              target: "#hubspot-form-container",
-              css: '', // Optional: If you want to override form styles, you can put your CSS here or leave it empty to use HubSpot defaults.
-              onFormReady: function($form){
-                // OPTIONAL: If you want to do additional DOM manipulation
-                // For example, you could reference the checkbox field by name or ID
-                // and add custom text. However, it's usually easiest to configure
-                // the form fields directly in HubSpot.
-              }
+              portalId: "YOUR_PORTAL_ID",
+              formId: "YOUR_FORM_ID",
+              target: "#hubspot-form-container"
             });
           </script>
           <div id="hubspot-form-container"></div>
-
-          <!-- If you want to A/B test the checkbox, you can create two forms in HubSpot:
-               - One with the checkbox
-               - One without
-               Then use a simple randomization or your own logic
-               to embed one form or the other here.
-           -->
         </div>
       </div>
     </div>
@@ -260,7 +336,7 @@
     </div>
   </footer>
 
-  <!-- MOBILE MENU SCRIPT (same as index.html) -->
+  <!-- MOBILE MENU SCRIPT -->
   <script>
     const mobileMenu = document.getElementById('mobile-menu');
     const navbarNav = document.getElementById('navbar-overlay');
@@ -276,4 +352,3 @@
   </script>
 </body>
 </html>
-
