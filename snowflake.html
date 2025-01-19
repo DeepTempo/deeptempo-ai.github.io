@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>DeepTempo + Snowflake</title>
 
-  <!-- Use the same fonts & CSS as your main site -->
+  <!-- Same fonts & CSS as your main site -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="shortcut icon" type="image/png" href="img/favicon.png">
 
-  <!-- Font Awesome for icons -->
+  <!-- Font Awesome (for icons) -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -27,7 +27,7 @@
     gtag('config', 'G-9EGVJW1TZT');
   </script>
 
-  <!-- HubSpot Tracking (adjust your Portal ID if needed) -->
+  <!-- HubSpot Tracking (adjust if needed) -->
   <script
     type="text/javascript"
     id="hs-script-loader"
@@ -36,25 +36,15 @@
     src="//js.hs-scripts.com/48299015.js"
   ></script>
 
-  <!-- Inline CSS for the new diagonal hero, video, value props, etc. -->
+  <!-- Inline CSS for diagonal hero & custom sections -->
   <style>
-    /* Basic reset if needed (optional) */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    /* NAVBAR, FOOTER, etc. 
-       You can rely on your existing style.css for general styling 
-       or override here if needed. */
-
-    /* DIAGONAL HERO SECTION */
+    /* DIAGONAL HERO */
     .hero-split {
       position: relative;
       width: 100%;
-      min-height: 60vh; /* Adjust as needed */
-      /* 45deg diagonal split, half red & half blue at 50% */
+      /* Smaller hero so the video appears higher on the page */
+      min-height: 40vh;
+      /* Diagonal gradient: 45deg, split at 50% between red & blue */
       background: linear-gradient(45deg, #d60000 50%, #29B5E8 50%);
       display: flex;
       justify-content: center;
@@ -62,17 +52,33 @@
       text-align: center;
     }
     .hero-content {
-      color: #fff; /* White text stands out on red & blue */
-      max-width: 1200px;
+      color: #fff;
+      max-width: 1000px;
       margin: 0 auto;
-      padding: 4rem 2rem;
+      /* Decreased padding to reduce total height */
+      padding: 3rem 2rem;
     }
-    .hero-content h1 {
+
+    /* LOGO AREA (DeepTempo + sign + Snowflake) */
+    .hero-logo-area {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1rem; /* space below logos before tagline */
+    }
+    .hero-logo {
+      height: 60px;
+      width: auto; /* maintain aspect ratio */
+    }
+    .hero-plus {
       font-size: 3rem;
-      margin-bottom: 1rem;
+      font-weight: 700;
     }
-    .hero-content p.hero-tagline {
-      font-size: 1.5rem;
+
+    /* TAGLINE */
+    .hero-tagline {
+      font-size: 2rem; /* increased from 1.5rem */
       line-height: 1.4;
       margin-bottom: 2rem;
       font-weight: 600;
@@ -82,13 +88,13 @@
     .video-section {
       text-align: center;
       padding: 4rem 2rem;
-      background-color: #f9f9f9; /* or #fff, your choice */
+      background-color: #f9f9f9;
     }
     .video-wrapper {
       max-width: 960px;
       margin: 0 auto;
       position: relative;
-      /* more horizontal ratio => 45% is wider than standard 16:9 (56.25%) */
+      /* More horizontal ratio (45%) so it's wider than the standard 16:9 (56.25%). */
       padding-bottom: 45%;
       height: 0;
     }
@@ -100,7 +106,7 @@
       top: 0;
     }
 
-    /* JOINT VALUE PROP SECTION */
+    /* VALUE PROP SECTION */
     .value-prop-section {
       padding: 4rem 2rem;
       background: #ffffff;
@@ -129,7 +135,7 @@
     .value-prop-icon {
       font-size: 3rem;
       margin-bottom: 1rem;
-      color: #d60000; /* accent color, or #29B5E8 if you prefer */
+      color: #d60000; /* or #29B5E8, whichever accent you like */
     }
     .value-prop-title {
       font-size: 1.25rem;
@@ -164,7 +170,7 @@
 </head>
 
 <body>
-  <!-- NAVIGATION BAR (sample structure similar to your index.html) -->
+  <!-- NAVBAR (similar to your index.html) -->
   <header class="navbar">
     <div class="navbar__logo">
       <img src="img/logo-full-color.png" alt="DeepTempo Logo">
@@ -186,17 +192,30 @@
     </nav>
   </header>
 
-  <!-- DIAGONAL HERO SECTION -->
+  <!-- DIAGONAL HERO with Logos -->
   <section class="hero-split">
     <div class="hero-content">
-      <h1>DeepTempo + Snowflake</h1>
+      <div class="hero-logo-area">
+        <!-- Replace with your actual logo paths -->
+        <img
+          src="img/Final DeepTempo logo_LE_ml_resize_x2.jpg"
+          alt="DeepTempo Logo"
+          class="hero-logo"
+        >
+        <span class="hero-plus">+</span>
+        <img
+          src="img/snow-logo-white-example.svg"
+          alt="Snowflake Logo"
+          class="hero-logo"
+        >
+      </div>
       <p class="hero-tagline">
         Superior cyber security available now from the Snowflake NativeApp marketplace
       </p>
     </div>
   </section>
 
-  <!-- VIDEO SECTION (No extra heading) -->
+  <!-- VIDEO SECTION (no heading) -->
   <section class="video-section">
     <div class="video-wrapper">
       <iframe
@@ -207,7 +226,7 @@
     </div>
   </section>
 
-  <!-- JOINT VALUE PROPOSITION -->
+  <!-- VALUE PROPOSITION -->
   <section class="value-prop-section">
     <div class="u-center-text">
       <h2 class="heading-secondary">Joint Value Proposition</h2>
@@ -226,7 +245,7 @@
         <i class="fas fa-shield-alt value-prop-icon"></i>
         <div class="value-prop-title">Improved Detections</div>
         <p class="value-prop-desc">
-          Identify attacks that rules &amp; ML systems can’t discern, thanks to deep learning.
+          See attacks that rules &amp; ML systems cannot discern, thanks to advanced deep learning.
         </p>
       </div>
       <!-- 3) Simple Operations -->
@@ -234,7 +253,7 @@
         <i class="fas fa-cogs value-prop-icon"></i>
         <div class="value-prop-title">Simple Operations</div>
         <p class="value-prop-desc">
-          Scales on Snowflake. Feeds alerts &amp; indicators into your SIEM for streamlined workflows.
+          Scales on Snowflake and feeds indicators into your SIEM for streamlined operations.
         </p>
       </div>
       <!-- 4) Proven at Scale -->
@@ -242,7 +261,7 @@
         <i class="fas fa-chart-line value-prop-icon"></i>
         <div class="value-prop-title">Proven at Scale</div>
         <p class="value-prop-desc">
-          Developed with a tier-one financial institution, handling massive log volumes seamlessly.
+          Developed with a tier one financial institution, handling massive log volumes seamlessly.
         </p>
       </div>
       <!-- 5) Per Usage Economics -->
@@ -250,7 +269,7 @@
         <i class="fas fa-coins value-prop-icon"></i>
         <div class="value-prop-title">Per Usage Economics</div>
         <p class="value-prop-desc">
-          Try for free. Pay via your Snowflake account or opt for unlimited plans from DeepTempo.
+          Try for free via your Snowflake account. Upgrade to unlimited plans with DeepTempo.
         </p>
       </div>
     </div>
@@ -264,7 +283,7 @@
           Register Now to Access a Free Trial on Snowflake
         </h2>
       </div>
-      <!-- HubSpot Form Embed (Replace with your real portalId & formId) -->
+      <!-- HubSpot Form Embed (Replace with your actual Portal/Form IDs) -->
       <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/shell.js"></script>
       <script>
         hbspt.forms.create({
@@ -309,7 +328,7 @@
     </div>
   </footer>
 
-  <!-- MOBILE MENU SCRIPT -->
+  <!-- MOBILE MENU SCRIPT (same as index.html) -->
   <script>
     const mobileMenu = document.getElementById('mobile-menu');
     const navbarNav = document.getElementById('navbar-overlay');
