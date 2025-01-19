@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Same Fonts as index.html -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Same main stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    >
+
+    <title>DeepTempo + Snowflake</title>
+
+    <!-- Google Tag Manager / Analytics (same as index.html) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9EGVJW1TZT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-9EGVJW1TZT');
+    </script>
+
+    <!-- HubSpot Tracking Code (same as index.html) -->
+    <script
+      type="text/javascript"
+      id="hs-script-loader"
+      async
+      defer
+      src="//js.hs-scripts.com/48299015.js"
+    ></script>
+  </head>
+
+  <body>
+    <!-- HEADER / NAV -->
+    <header class="navbar">
+      <div class="navbar__logo">
+        <img src="img/logo-full-color.png" alt="DeepTempo Logo">
+      </div>
+      <div class="navbar__toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <nav class="navbar__nav" id="navbar-overlay">
+        <ul class="navbar__list">
+          <!-- You can keep or remove links as desired; here we add a "Snowflake" link -->
+          <li class="navbar__item"><a href="index.html" class="navbar__link">Home</a></li>
+          <li class="navbar__item"><a href="product.html" class="navbar__link">Product</a></li>
+          <li class="navbar__item"><a href="about-us.html" class="navbar__link">About Us</a></li>
+          <li class="navbar__item"><a href="snowflake.html" class="navbar__link active">Snowflake</a></li>
+          <li class="navbar__item"><a href="contact-us.html" class="navbar__link">Contact Us</a></li>
+        </ul>
+        <div class="navbar__close" id="close-menu">&times;</div>
+      </nav>
+    </header>
+
+    <!-- HERO / HEADER SECTION -->
+    <header class="header">
+      <div class="header__text-box">
+        <h1 class="heading-primary">
+          <span class="heading-primary--main">
+            <img alt="Full logo" src="img/logo-full-color.png">
+          </span>
+          <span class="heading-primary--sub">DeepTempo + Snowflake</span>
+        </h1>
+        <a href="#section-video" class="btn btn--outline-white btn--animated">
+          Watch the Video
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <!-- JOINT VALUE PROPOSITION SECTION -->
+      <section class="section-about">
+        <div class="u-center-text u-margin-bottom-big">
+          <h2 class="heading-secondary">
+            Our Joint Value Proposition
+          </h2>
+        </div>
+
+        <div class="row">
+          <!-- Customize the text here to describe your partnership’s benefits -->
+          <div class="col-1-of-1">
+            <p class="paragraph">
+              DeepTempo’s partnership with Snowflake revolutionizes how security teams gain insights from large volumes of log data. By leveraging Snowflake’s secure, scalable data platform and DeepTempo’s advanced deep learning model, customers can:
+            </p>
+            <ul class="paragraph">
+              <li>Process massive data sets efficiently</li>
+              <li>Detect threats with state-of-the-art ML accuracy</li>
+              <li>Reduce SIEM costs by filtering noise before ingestion</li>
+              <li>Deploy easily as a Snowflake Native App or on-premise</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- VIDEO SECTION -->
+      <section class="section-about" id="section-video">
+        <div class="u-center-text u-margin-bottom-big">
+          <h2 class="heading-secondary">
+            Watch Our Snowflake Partnership Video
+          </h2>
+        </div>
+
+        <div class="row">
+          <div class="col-1-of-2">
+            <!-- Embed your YouTube video here -->
+            <div class="video-container">
+              <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/meaxmFGyep4?si=RmIJuR1Mm9K2tUEQ"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+
+          <div class="col-1-of-2">
+            <p class="paragraph">
+              In this short video, you’ll see how DeepTempo’s cutting-edge deep learning techniques 
+              integrate with Snowflake’s Data Cloud to deliver next-level cybersecurity capabilities. 
+              We provide unparalleled threat detection and reduce alert fatigue so your team can 
+              focus on real threats.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- OPTIONAL: EMBED A HUBSPOT FORM OR CONTACT SECTION HERE -->
+      <section class="section-book">
+        <div class="row">
+          <div class="book">
+            <div class="book__form">
+              <!-- Example: Formspree or your HubSpot embed code -->
+              <form action="https://formspree.io/f/xvgorvbl" method="POST" class="form">
+                <div class="u-margin-bottom-medium">
+                  <h2 class="heading-secondary">
+                    Learn More
+                  </h2>
+                </div>
+                <div class="form__group">
+                  <input type="email" class="form__input" placeholder="Email address" id="email" name="email" required>
+                  <label for="email" class="form__label">Email address</label>
+                </div>
+                <div class="form__group">
+                  <button type="submit" class="btn btn--outline-white">Submit</button>
+                </div>
+              </form>
+              
+              <!-- If using HubSpot forms, replace the above form with your HubSpot embed snippet:
+              <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/shell.js"></script>
+              <script>
+                hbspt.forms.create({
+                  region: "na1",
+                  portalId: "48299015",
+                  formId: "YOUR_FORM_ID",
+                  target: "#hs-form"
+                });
+              </script>
+              <div id="hs-form"></div>
+              -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER (same as index.html) -->
+    <footer class="footer">
+      <div class="row">
+        <div class="col-1-of-2">
+          <ul class="footer-nav">
+            <li>&copy; Skidaway, Inc. d/b/a DeepTempo. All rights reserved.</li>
+            <li><a href="docs/DeepTempo - Privacy Policy for Snowflake NativeApp.pdf">Privacy</a></li>
+            <li><a href="docs/Getting Started with TEMPO.pdf">Documentation</a></li>
+          </ul>
+          <div class="footer__social-media">
+            <a href="https://www.youtube.com/@DeepTempo-ai" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.linkedin.com/groups/13114314/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.reddit.com/r/DeepTempo/" target="_blank"><i class="fab fa-reddit"></i></a>
+            <a href="https://medium.com/deeptempo" target="_blank"><i class="fab fa-medium"></i></a>
+          </div>
+          <div class="footer__certifications">
+            <img src="img/native-app-accelerator-badge.png" alt="Native App Accelerator Badge" class="footer-cert-logo">
+            <img src="img/nvidia-inception-program-badge.png" alt="Nvidia Inception Program Badge" class="footer-cert-logo">
+          </div>
+        </div>
+        <div class="col-1-of-2">
+          <picture class="footer__logo">
+            <img alt="Full logo" src="img/logo-full-color.png">
+          </picture>
+          <p class="footer__copyright">
+            DeepTempo was built by a team of deep learning engineers...
+            <!-- (Add or shorten text as needed) -->
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SCRIPTS (Same mobile menu JS as index.html) -->
+    <script>
+      const mobileMenu = document.getElementById('mobile-menu');
+      const navbarNav = document.getElementById('navbar-overlay');
+      const closeMenu = document.getElementById('close-menu');
+
+      mobileMenu.addEventListener('click', () => {
+        navbarNav.classList.add('active');
+      });
+
+      closeMenu.addEventListener('click', () => {
+        navbarNav.classList.remove('active');
+      });
+    </script>
+  </body>
+</html>
