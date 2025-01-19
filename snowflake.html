@@ -229,53 +229,165 @@
   </section>
 
   <!-- VALUE PROPOSITION -->
-  <section class="value-prop-section">
-    <div class="u-center-text">
-      <h2 class="heading-secondary">Joint Value Proposition</h2>
+<section class="value-prop-section" style="padding: 4rem 2rem; background: #ffffff;">
+  <!-- Centered heading -->
+  <div class="u-center-text" style="margin-bottom: 2rem;">
+    <!-- Increased font size for the heading -->
+    <h2 class="heading-secondary" style="font-size: 2.2rem; margin-bottom: 1rem;">
+      Joint Value Proposition
+    </h2>
+  </div>
+
+  <!-- Cards container (grid layout) -->
+  <div class="value-prop-cards" 
+    style="
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem; 
+      max-width: 1200px; 
+      margin: 0 auto;
+    "
+  >
+
+    <!-- 1) Cost Savings -->
+    <div class="value-prop-card" 
+      style="
+        text-align: center; 
+        border: 1px solid #eee; 
+        border-radius: 8px; 
+        padding: 2rem; 
+        transition: box-shadow 0.2s; 
+        background: #fff;
+      "
+    >
+      <i class="fas fa-piggy-bank" style="font-size: 3rem; margin-bottom: 1rem; color: #d60000;"></i>
+      <div class="value-prop-title" style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">
+        Cost Savings
+      </div>
+      <p class="value-prop-desc" style="font-size: 1.1rem; line-height: 1.4; color: #333;">
+        Save 80% or more on ingestion and operational costs by filtering out noise before it hits your SIEM.
+      </p>
     </div>
-    <div class="value-prop-cards">
-      <!-- 1) Cost Savings -->
-      <div class="value-prop-card">
-        <i class="fas fa-piggy-bank value-prop-icon"></i>
-        <div class="value-prop-title">Cost Savings</div>
-        <p class="value-prop-desc">
-          Save 80% or more by sending accurate alerts - and fewer raw logs - to your SIEM.
-        </p>
+
+    <!-- 2) Improved Detections -->
+    <div class="value-prop-card" 
+      style="
+        text-align: center; 
+        border: 1px solid #eee; 
+        border-radius: 8px; 
+        padding: 2rem; 
+        background: #fff;
+      "
+    >
+      <i class="fas fa-shield-alt" style="font-size: 3rem; margin-bottom: 1rem; color: #d60000;"></i>
+      <div class="value-prop-title" style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">
+        Improved Detections
       </div>
-      <!-- 2) Improved Detections -->
-      <div class="value-prop-card">
-        <i class="fas fa-shield-alt value-prop-icon"></i>
-        <div class="value-prop-title">Improved Detections</div>
-        <p class="value-prop-desc">
-          See attacks that rules &amp; ML systems overlook, thanks to LogLM based deep learning.
-        </p>
-      </div>
-      <!-- 3) Simple Operations -->
-      <div class="value-prop-card">
-        <i class="fas fa-cogs value-prop-icon"></i>
-        <div class="value-prop-title">Simple Operations</div>
-        <p class="value-prop-desc">
-          Auto-scales on Snowflake and feeds indicators into your SIEM. 
-        </p>
-      </div>
-      <!-- 4) Proven at Scale -->
-      <div class="value-prop-card">
-        <i class="fas fa-chart-line value-prop-icon"></i>
-        <div class="value-prop-title">Proven at Scale</div>
-        <p class="value-prop-desc">
-          Developed with a tier-one financial institution, handling massive log volumes seamlessly.
-        </p>
-      </div>
-      <!-- 5) Per Usage Economics -->
-      <div class="value-prop-card">
-        <i class="fas fa-coins value-prop-icon"></i>
-        <div class="value-prop-title">Per Usage Economics</div>
-        <p class="value-prop-desc">
-          Try for free via your Snowflake account. Pay only for what you use - use your Snowflake credits.
-        </p>
-      </div>
+      <p class="value-prop-desc" style="font-size: 1.1rem; line-height: 1.4; color: #333;">
+        See attacks that rules &amp; ML systems cannot discern, thanks to advanced deep learning.
+      </p>
     </div>
-  </section>
+
+    <!-- 3) Simple Operations -->
+    <div class="value-prop-card" 
+      style="
+        text-align: center; 
+        border: 1px solid #eee; 
+        border-radius: 8px; 
+        padding: 2rem; 
+        background: #fff;
+      "
+    >
+      <i class="fas fa-cogs" style="font-size: 3rem; margin-bottom: 1rem; color: #d60000;"></i>
+      <div class="value-prop-title" style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">
+        Simple Operations
+      </div>
+      <p class="value-prop-desc" style="font-size: 1.1rem; line-height: 1.4; color: #333;">
+        Scales on Snowflake and feeds indicators into your SIEM for streamlined operations.
+      </p>
+    </div>
+
+    <!-- 4) Proven at Scale -->
+    <div class="value-prop-card" 
+      style="
+        text-align: center; 
+        border: 1px solid #eee; 
+        border-radius: 8px; 
+        padding: 2rem; 
+        background: #fff;
+      "
+    >
+      <i class="fas fa-chart-line" style="font-size: 3rem; margin-bottom: 1rem; color: #d60000;"></i>
+      <div class="value-prop-title" style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">
+        Proven at Scale
+      </div>
+      <p class="value-prop-desc" style="font-size: 1.1rem; line-height: 1.4; color: #333;">
+        Developed with a tier one financial institution, handling massive log volumes seamlessly.
+      </p>
+    </div>
+
+    <!-- 5) Per Usage Economics -->
+    <div class="value-prop-card" 
+      style="
+        text-align: center; 
+        border: 1px solid #eee; 
+        border-radius: 8px; 
+        padding: 2rem; 
+        background: #fff;
+      "
+    >
+      <i class="fas fa-coins" style="font-size: 3rem; margin-bottom: 1rem; color: #d60000;"></i>
+      <div class="value-prop-title" style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">
+        Per Usage Economics
+      </div>
+      <p class="value-prop-desc" style="font-size: 1.1rem; line-height: 1.4; color: #333;">
+        Try for free via your Snowflake account. Upgrade to unlimited plans with DeepTempo.
+      </p>
+    </div>
+
+    <!-- 6) Immediate Value (NEW) -->
+    <div class="value-prop-card" 
+      style="
+        text-align: center; 
+        border: 1px solid #eee; 
+        border-radius: 8px; 
+        padding: 2rem; 
+        background: #fff;
+      "
+    >
+      <!-- Using a lightning bolt icon for "Immediate Value" -->
+      <i class="fas fa-bolt" style="font-size: 3rem; margin-bottom: 1rem; color: #d60000;"></i>
+      <div class="value-prop-title" style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">
+        Immediate Value
+      </div>
+      <p class="value-prop-desc" style="font-size: 1.1rem; line-height: 1.4; color: #333;">
+        Tempo adapts immediately—unlike traditional ML, which can take months to fine-tune.
+      </p>
+    </div>
+
+    <!-- 7) Data Sovereignty (NEW) -->
+    <div class="value-prop-card" 
+      style="
+        text-align: center; 
+        border: 1px solid #eee; 
+        border-radius: 8px; 
+        padding: 2rem; 
+        background: #fff;
+      "
+    >
+      <!-- Using a database icon for "Data Sovereignty" -->
+      <i class="fas fa-database" style="font-size: 3rem; margin-bottom: 1rem; color: #d60000;"></i>
+      <div class="value-prop-title" style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">
+        Data Sovereignty
+      </div>
+      <p class="value-prop-desc" style="font-size: 1.1rem; line-height: 1.4; color: #333;">
+        You remain in complete control. Your data never leaves your Snowflake environment.
+      </p>
+    </div>
+
+  </div>
+</section>
+
 
   <!-- HUBSPOT FORM SECTION -->
   <section class="section-book">
