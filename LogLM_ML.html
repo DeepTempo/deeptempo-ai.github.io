@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- Preconnect to fonts and load Lexend -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet" />
+
+    <!-- Main CSS file from DeepTempo -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <title>LogLM vs. ML | DeepTempo</title>
+
+    <!-- Additional custom styles for this page -->
+    <style>
+        /* Adjust the hero section for our page */
+        .hero-section {
+            background-image: linear-gradient(to bottom right,
+                    rgba(98, 98, 98, 0.93),
+                    rgba(0, 0, 0, 0.95)),
+                url('img/hero-custom.jpg');
+            /* Replace with a relevant background image */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-title {
+            font-size: 5rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .hero-subtitle {
+            font-size: 2.5rem;
+            font-weight: 300;
+        }
+
+        /* Container for our custom content sections */
+        .section-content {
+            padding: 6rem 2rem;
+            background: #f7f7f7;
+        }
+
+        .section-content h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 5rem;
+        }
+
+        .section-content p {
+            font-size: 1.6rem;
+            line-height: 1.7;
+            max-width: 800px;
+            margin: 0 auto 3rem auto;
+            text-align: center;
+        }
+
+        /* Comparison Table Styling */
+        .comparison-table {
+            width: 90%;
+            margin: 0 auto 4rem auto;
+            border-collapse: collapse;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            font-size: 1.6rem;
+            text-align: center;
+        }
+
+        .comparison-table th {
+            background: #ff2702;
+            color: #fff;
+        }
+
+        /* Triangle Diagram Section */
+        .triangle-container {
+            text-align: center;
+            margin: 4rem 0;
+        }
+
+        .triangle-svg {
+            width: 300px;
+            height: 260px;
+            margin: 0 auto;
+        }
+
+        .triangle-svg polygon {
+            fill: #ffe6e6;
+            stroke: #ff2702;
+            stroke-width: 2;
+        }
+
+        .triangle-svg text {
+            fill: #ff2702;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header / Navigation (from your main site) -->
+    <header class="navbar">
+        <div class="navbar__logo">
+            <img src="img/logo-full-color.png" alt="DeepTempo Logo" />
+        </div>
+        <div class="navbar__toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <nav class="navbar__nav" id="navbar-overlay">
+            <ul class="navbar__list">
+                <li class="navbar__item">
+                    <a href="index.html" class="navbar__link">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="product.html" class="navbar__link">Product</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="about-us.html" class="navbar__link">About Us</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="https://medium.com/deeptempo" target="_blank" class="navbar__link">Blog</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="http://docs.deeptempo.ai/" target="_blank" class="navbar__link">Documentation</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="contact-us.html" class="navbar__link">Contact Us</a>
+                </li>
+            </ul>
+            <div class="navbar__close" id="close-menu">&times;</div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-section-content">
+            <h1 class="hero-title">LogLM vs. ML</h1>
+            <p class="hero-subtitle">
+                Comparing Deep Learning-Powered Tempo LogLM with Traditional ML/UEBA Solutions
+            </p>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="section-content">
+        <h2 class="heading-secondary">Introduction</h2>
+        <p>
+            Traditional machine learning approaches in cybersecurity often rely on static,
+            rule-based methods that lack the agility to adapt to rapidly evolving threats.
+            In contrast, DeepTempo’s Tempo LogLM leverages a transformer-based deep learning model,
+            pretrained on extensive log data, to deliver superior accuracy, rapid adaptability,
+            and transparent, explainable insights.
+        </p>
+    </section>
+
+    <!-- Comparison Table Section -->
+    <section class="section-content">
+        <h2 class="heading-secondary">UEBA Comparison</h2>
+        <p>
+            The table below compares Tempo LogLM against leading UEBA solutions across key attributes:
+            Accuracy, Adaptability, Extensibility, Scalability, Explainability, Ease of Deployment,
+            Operations Cost, and Visibility.
+        </p>
+        <table class="comparison-table">
+            <tr>
+                <th>Attribute</th>
+                <th>Tempo</th>
+                <th>Securonix</th>
+                <th>Splunk UBA</th>
+                <th>Exabeam</th>
+                <th>IBM QRadar</th>
+            </tr>
+            <tr>
+                <td>Accuracy</td>
+                <td>A</td>
+                <td>B</td>
+                <td>B</td>
+                <td>B</td>
+                <td>C</td>
+            </tr>
+            <tr>
+                <td>Adaptability</td>
+                <td>A</td>
+                <td>B</td>
+                <td>B</td>
+                <td>B</td>
+                <td>C</td>
+            </tr>
+            <tr>
+                <td>Extensibility</td>
+                <td>A</td>
+                <td>B</td>
+                <td>C</td>
+                <td>B</td>
+                <td>B</td>
+            </tr>
+            <tr>
+                <td>Scalability</td>
+                <td>A</td>
+                <td>A</td>
+                <td>A</td>
+                <td>A</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>Explainability</td>
+                <td>A</td>
+                <td>B</td>
+                <td>B</td>
+                <td>B</td>
+                <td>C</td>
+            </tr>
+            <tr>
+                <td>Ease of Deployment</td>
+                <td>A</td>
+                <td>B</td>
+                <td>C</td>
+                <td>B</td>
+                <td>C</td>
+            </tr>
+            <tr>
+                <td>Operations Cost</td>
+                <td>A</td>
+                <td>B</td>
+                <td>C</td>
+                <td>B</td>
+                <td>C</td>
+            </tr>
+            <tr>
+                <td>Visibility</td>
+                <td>IC</td>
+                <td>A</td>
+                <td>A</td>
+                <td>A</td>
+                <td>A</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Triangle Diagram Section -->
+    <section class="section-content">
+        <h2 class="heading-secondary">Key Attributes Visualized</h2>
+        <div class="triangle-container">
+            <svg class="triangle-svg" viewBox="0 0 300 260">
+                <polygon points="150,20 20,240 280,240" />
+                <text x="40" y="180" text-anchor="middle">Accuracy</text>
+                <text x="260" y="180" text-anchor="middle">Adaptability</text>
+                <text x="150" y="40" text-anchor="middle">Explainability</text>
+                <text x="150" y="150" text-anchor="middle" font-size="1.4em">
+                    Effectiveness
+                </text>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="row">
+            <div class="col-1-of-2">
+                <ul class="footer-nav">
+                    <li>&copy; DeepTempo.ai - 2024. All rights reserved.</li>
+                    <li>
+                        <a href="docs/DeepTempo - Privacy Policy for Snowflake NativeApp.pdf">Privacy</a>
+                    </li>
+                    <li>
+                        <a href="docs/Getting Started with TEMPO.pdf">Documentation</a>
+                    </li>
+                </ul>
+                <div class="footer__social-media">
+                    <a href="https://www.youtube.com/@DeepTempo-ai" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.linkedin.com/groups/13114314/" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://www.reddit.com/r/DeepTempo/" target="_blank"><i class="fab fa-reddit"></i></a>
+                    <a href="https://medium.com/deeptempo" target="_blank"><i class="fab fa-medium"></i></a>
+                </div>
+                <div class="footer__certifications">
+                    <img src="img/native-app-accelerator-badge.png" alt="Native App Accelerator Badge"
+                        class="footer-cert-logo" />
+                    <img src="img/nvidia-inception-program-badge.png" alt="Nvidia Inception Program Badge"
+                        class="footer-cert-logo" />
+                </div>
+            </div>
+            <div class="col-1-of-2">
+                <picture class="footer__logo">
+                    <img alt="Full logo" src="img/logo-full-color.png" />
+                </picture>
+                <p class="footer__copyright">
+                    DeepTempo was built by a team of deep learning engineers and enterprise system builders,
+                    many of whom have spent years in security operations teams. We believe in harnessing collective
+                    defense for cyber security via deep learning, to make the lives of security operations teams
+                    better while restoring the initiative to the defenders.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const mobileMenu = document.getElementById("mobile-menu");
+        const navbarNav = document.getElementById("navbar-overlay");
+        const closeMenu = document.getElementById("close-menu");
+
+        mobileMenu.addEventListener("click", () => {
+            navbarNav.classList.add("active");
+        });
+
+        closeMenu.addEventListener("click", () => {
+            navbarNav.classList.remove("active");
+        });
+    </script>
+
+    <!-- HubSpot Embed Code -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/48299015.js"></script>
+</body>
+
+</html>
