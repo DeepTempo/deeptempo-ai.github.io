@@ -27,21 +27,21 @@
 
     <!-- Additional custom styles for this page -->
     <style>
-      /* Center all headings in our custom sections */
+      /* Center headings for hero and content sections */
       .section-content h2,
       .hero-title,
       .hero-subtitle {
         text-align: center;
       }
 
-      /* Enhance the introduction section with a subtle background image and gradient overlay */
+      /* Enhance the introduction container with a background and larger text */
       .intro-container {
         text-align: center;
         padding: 3rem 2rem;
         margin: 2rem auto 4rem auto;
         max-width: 900px;
         border-radius: 8px;
-        /* Replace 'img/intro-bg.jpg' with your desired background image */
+        /* Replace with your desired background image */
         background: linear-gradient(
             rgba(255, 255, 255, 0.85),
             rgba(255, 255, 255, 0.85)
@@ -50,15 +50,48 @@
         background-size: cover;
         background-position: center;
       }
-
       .intro-container p {
-        font-size: 1.6rem;
+        font-size: 2.2rem; /* Increased font size */
         line-height: 1.7;
       }
 
-      /* Optionally, add some extra spacing to the hero section titles */
-      .hero-section-content {
-        padding: 6rem 2rem;
+      /* Increase table font-size and padding */
+      .comparison-table {
+        width: 90%;
+        margin: 0 auto 4rem auto;
+        border-collapse: collapse;
+        font-size: 2rem; /* Larger table text */
+      }
+      .comparison-table th,
+      .comparison-table td {
+        border: 1px solid #ddd;
+        padding: 1.5rem;
+        text-align: center;
+      }
+      .comparison-table th {
+        background: #ff2702;
+        color: #fff;
+      }
+
+      /* Reduce the size of the triangle diagram and adjust its colors */
+      .triangle-container {
+        text-align: center;
+        margin: 4rem 0;
+      }
+      .triangle-svg {
+        width: 200px; /* Reduced width */
+        height: 150px; /* Reduced height */
+        margin: 0 auto;
+      }
+      .triangle-svg polygon {
+        fill: rgba(255, 230, 230, 0.7); /* Light red with transparency */
+        stroke: #ff2702;
+        stroke-width: 2;
+      }
+      .triangle-svg text {
+        fill: #ff2702;
+        font-weight: 600;
+        font-size: 1.4rem;
       }
     </style>
   </head>
@@ -115,12 +148,17 @@
       </div>
     </section>
 
-    <!-- Introduction Section with Enhanced Styling -->
+    <!-- Introduction Section (without the title "Introduction") -->
     <section class="section-content">
-      <h2 class="heading-secondary">Introduction</h2>
       <div class="intro-container">
         <p>
-          Traditional machine learning approaches in cybersecurity often rely on <span class="highlight">static</span> and <span class="highlight">rule-based</span> methods that can become <span class="highlight">inefficient</span> when threats evolve. In contrast, DeepTempo’s <span class="highlight">Tempo LogLM</span> employs a <span class="highlight">transformer-based deep learning model</span> that’s pretrained on vast amounts of log data. This results in <span class="highlight">superior accuracy</span>, rapid <span class="highlight">adaptability</span>, and <span class="highlight">transparent insights</span> that empower security teams to respond more effectively.
+          Traditional machine learning approaches in cybersecurity often rely on
+          <span class="highlight">static</span> and <span class="highlight">rule-based</span> methods
+          that can become <span class="highlight">inefficient</span> when threats evolve.
+          In contrast, DeepTempo’s <span class="highlight">Tempo LogLM</span> employs a
+          <span class="highlight">transformer-based deep learning model</span> pretrained on vast
+          amounts of log data, resulting in <span class="highlight">superior accuracy</span>,
+          rapid <span class="highlight">adaptability</span>, and <span class="highlight">transparent insights</span>.
         </p>
       </div>
     </section>
@@ -230,43 +268,21 @@
           <ul class="footer-nav">
             <li>&copy; DeepTempo.ai - 2024. All rights reserved.</li>
             <li>
-              <a href="docs/DeepTempo - Privacy Policy for Snowflake NativeApp.pdf"
-                >Privacy</a
-              >
+              <a href="docs/DeepTempo - Privacy Policy for Snowflake NativeApp.pdf">Privacy</a>
             </li>
             <li>
               <a href="docs/Getting Started with TEMPO.pdf">Documentation</a>
             </li>
           </ul>
           <div class="footer__social-media">
-            <a
-              href="https://www.youtube.com/@DeepTempo-ai"
-              target="_blank"
-              ><i class="fab fa-youtube"></i
-            ></a>
-            <a
-              href="https://www.linkedin.com/groups/13114314/"
-              target="_blank"
-              ><i class="fab fa-linkedin"></i
-            ></a>
-            <a href="https://www.reddit.com/r/DeepTempo/" target="_blank"
-              ><i class="fab fa-reddit"></i
-            ></a>
-            <a href="https://medium.com/deeptempo" target="_blank"
-              ><i class="fab fa-medium"></i
-            ></a>
+            <a href="https://www.youtube.com/@DeepTempo-ai" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.linkedin.com/groups/13114314/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.reddit.com/r/DeepTempo/" target="_blank"><i class="fab fa-reddit"></i></a>
+            <a href="https://medium.com/deeptempo" target="_blank"><i class="fab fa-medium"></i></a>
           </div>
           <div class="footer__certifications">
-            <img
-              src="img/native-app-accelerator-badge.png"
-              alt="Native App Accelerator Badge"
-              class="footer-cert-logo"
-            />
-            <img
-              src="img/nvidia-inception-program-badge.png"
-              alt="Nvidia Inception Program Badge"
-              class="footer-cert-logo"
-            />
+            <img src="img/native-app-accelerator-badge.png" alt="Native App Accelerator Badge" class="footer-cert-logo" />
+            <img src="img/nvidia-inception-program-badge.png" alt="Nvidia Inception Program Badge" class="footer-cert-logo" />
           </div>
         </div>
         <div class="col-1-of-2">
@@ -308,4 +324,3 @@
     ></script>
   </body>
 </html>
-
