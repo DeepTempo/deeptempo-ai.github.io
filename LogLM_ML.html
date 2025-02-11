@@ -126,15 +126,12 @@
         justify-content: center;
         align-items: center;
       }
-      /* Triangle diagram styling – larger size, fixed so words aren’t cut off */
+      /* Triangle diagram styling – larger size with adjusted viewBox so text isn’t cut off */
       .triangle-svg {
         width: 300px;
         height: 260px;
       }
-      /* Updated viewBox and polygon coordinates:
-         We use viewBox="0 0 340 260" with polygon points "170,20 40,240 310,240".
-         This gives extra room on the right.
-      */
+      /* Use viewBox="0 0 340 260" with polygon points "170,20 40,240 310,240" for extra right margin */
       .triangle-svg polygon {
         fill: rgba(255, 230, 230, 0.7);
         stroke: #ff2702;
@@ -144,16 +141,6 @@
         fill: #ff2702;
         font-weight: 600;
         font-size: 1.8rem;
-      }
-      /* Positioning text within the triangle */
-      /* "Accuracy" on the left */
-      .triangle-svg .accuracy {
-        transform: translate(0, 0);
-      }
-      /* "Adaptability" on the right */
-      .triangle-svg .adaptability {
-        /* Place slightly left of the right edge */
-        transform: translate(-10px, 0);
       }
     </style>
   </head>
@@ -206,7 +193,6 @@
     <!-- Introduction Section (without "Introduction" title) -->
     <section class="section-content">
       <div class="intro-container">
-        <p>
         <p style="font-size: 2.2rem; line-height: 1.7;">
           Traditional machine-learning approaches in cybersecurity rely upon many different models which are selected and trained by engineers to work in 
           <span style="color: #ff2702;">specific environments.</span> In contrast, DeepTempo’s Tempo LogLM is a 
@@ -214,7 +200,6 @@
           <span style="color: #ff2702;">accuracy</span>, rapid 
           <span style="color: #ff2702;">adaptability</span>, and improved 
           <span style="color: #ff2702;">explainability</span>.
-        </p>
         </p>
       </div>
     </section>
@@ -224,14 +209,11 @@
       <h2 class="heading-secondary">Key Attributes Visualized</h2>
       <div class="triangle-container">
         <svg class="triangle-svg" viewBox="0 0 340 260">
-          <!-- Adjusted polygon with extra right margin -->
           <polygon points="170,20 40,240 310,240" />
           <text x="70" y="180" text-anchor="middle" class="accuracy">Accuracy</text>
           <text x="310" y="180" text-anchor="middle" class="adaptability">Adaptability</text>
           <text x="170" y="40" text-anchor="middle">Explainability</text>
-          <text x="170" y="150" text-anchor="middle" font-size="2rem">
-            Effectiveness
-          </text>
+          <text x="170" y="150" text-anchor="middle" font-size="2rem">Effectiveness</text>
         </svg>
       </div>
     </section>
@@ -325,17 +307,17 @@
         <div class="col-1-of-2">
           <h2 class="heading-secondary" style="text-align: left;">Model Criteria</h2>
           <p>
-            While <span class="highlight">Accuracy</span> is crucial – both low false positives and low false negatives are essential for reducing the burden on your security team and ensuring effective protection – so too are <span class="highlight">Adaptability</span> and <span class="highlight">Explainability</span>.
+            While <span class="highlight">Accuracy</span> is crucial, so for security operations, so too are <span class="highlight">Adaptability</span> and <span class="highlight">Explainability</span>.
           </p>
           <ul>
             <li>
-              <span>Accuracy:</span> Both low false positives and false negatives are crucial. Low false positives reduce the burden on your security team, while low false negatives indicate the model’s effectiveness in protecting your organization.
+              <span>Accuracy:</span> Both low false positives and low false negatives are crucial. Low false positives reduce the burden on your security team, and low false negatives indicate how effective the model is in protecting your organization.
             </li>
             <li>
-              <span>Adaptability:</span> Foundation models like a LogLM are designed to quickly transfer knowledge from previous environments to new ones, reducing the time to value and minimizing the operational burden of retraining.
+              <span>Adaptability:</span> Foundation models like a LogLM quickly transfer knowledge from previous environments to new ones, reducing the time to value and minimizing the operational burden of retraining.
             </li>
             <li>
-              <span>Explainability:</span> For security teams to act on alerts, LogLMs must provide clear context—such as impacted entities and correlations with MITRE ATT&CK patterns.
+              <span>Explainability:</span> To be useful for security teams, LogLMs must provide clear context—such as impacted entities and correlations with MITRE ATT&CK patterns.
             </li>
           </ul>
         </div>
@@ -344,32 +326,13 @@
           <svg class="triangle-svg" viewBox="0 0 340 260">
             <polygon points="170,20 40,240 310,240" />
             <text x="70" y="180" text-anchor="middle" class="accuracy">Accuracy</text>
-            <text x="300" y="180" text-anchor="middle" class="adaptability">Adaptability</text>
+            <text x="310" y="180" text-anchor="middle" class="adaptability" transform="translate(-10,0)">Adaptability</text>
             <text x="170" y="40" text-anchor="middle">Explainability</text>
-            <text x="170" y="150" text-anchor="middle" font-size="2rem">
-              Effectiveness
-            </text>
+            <text x="170" y="150" text-anchor="middle" font-size="2rem">Effectiveness</text>
           </svg>
         </div>
       </div>
     </section>
-
-    <!-- Criteria for Model Evaluation Section (Optional duplicate if needed) -->
-    <!--
-    <section class="attribute-explanations">
-      <h2>Criteria for Model Evaluation</h2>
-      <ul>
-        <li><span>Accuracy:</span> Measures the precision and recall of anomaly detection. A higher rating means fewer false positives and negatives.</li>
-        <li><span>Adaptability:</span> Reflects how quickly the solution can deliver value and adapt to new threats or domains.</li>
-        <li><span>Extensibility:</span> Assesses the solution’s ability to integrate with various SIEM systems and broader security ecosystems.</li>
-        <li><span>Scalability:</span> Evaluates how well the solution manages large volumes of log data and grows with your organization.</li>
-        <li><span>Explainability:</span> Considers how clearly the solution’s outputs can be interpreted, helping analysts understand the reasons behind alerts.</li>
-        <li><span>Ease of Deployment:</span> Looks at the simplicity of integrating the solution into existing environments.</li>
-        <li><span>Operations Cost:</span> Measures the efficiency in terms of log ingestion, processing, and storage costs.</li>
-        <li><span>Visibility:</span> Evaluates the breadth of log sources and types the solution can process.</li>
-      </ul>
-    </section>
-    -->
 
     <!-- Footer Section -->
     <footer class="footer">
@@ -442,4 +405,5 @@
     ></script>
   </body>
 </html>
+
 
