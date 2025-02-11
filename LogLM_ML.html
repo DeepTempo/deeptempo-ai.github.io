@@ -83,28 +83,27 @@
         color: #fff;
       }
 
-      /* Triangle diagram styling (larger size) */
+      /* Triangle diagram styling (larger size, adjusted viewBox) */
       .triangle-container {
         text-align: center;
         margin: 4rem 0;
       }
+      /* Updated viewBox and polygon coordinates give extra margin on the right */
       .triangle-svg {
         width: 300px;
         height: 260px;
         margin: 0 auto;
       }
       .triangle-svg polygon {
+        /* Adjusted polygon: center shifted to 160, with left=30 and right=290 */
         fill: rgba(255, 230, 230, 0.7);
         stroke: #ff2702;
         stroke-width: 2;
       }
-      .triangle-svg text {
-        fill: #ff2702;
-        font-weight: 600;
-        font-size: 1.8rem;
-      }
-
-      /* Attribute Explanations Section */
+      /* We'll update the SVG below to use a viewBox of 0 0 320 260 */
+      /* Text positions adjusted so that none are cut off */
+      
+      /* Attribute Explanations Section renamed to "Criteria for Model Evaluation" */
       .attribute-explanations {
         width: 90%;
         max-width: 1000px;
@@ -156,17 +155,10 @@
             <a href="about-us.html" class="navbar__link">About Us</a>
           </li>
           <li class="navbar__item">
-            <a
-              href="https://medium.com/deeptempo"
-              target="_blank"
-              class="navbar__link"
-              >Blog</a
-            >
+            <a href="https://medium.com/deeptempo" target="_blank" class="navbar__link">Blog</a>
           </li>
           <li class="navbar__item">
-            <a href="http://docs.deeptempo.ai/" target="_blank" class="navbar__link"
-              >Documentation</a
-            >
+            <a href="http://docs.deeptempo.ai/" target="_blank" class="navbar__link">Documentation</a>
           </li>
           <li class="navbar__item">
             <a href="contact-us.html" class="navbar__link">Contact Us</a>
@@ -205,12 +197,12 @@
     <section class="section-content">
       <h2 class="heading-secondary">Key Attributes Visualized</h2>
       <div class="triangle-container">
-        <svg class="triangle-svg" viewBox="0 0 300 260">
-          <polygon points="150,20 20,240 280,240" />
-          <text x="40" y="180" text-anchor="middle">Accuracy</text>
-          <text x="260" y="180" text-anchor="middle">Adaptability</text>
-          <text x="150" y="40" text-anchor="middle">Explainability</text>
-          <text x="150" y="150" text-anchor="middle" font-size="1.8em">
+        <svg class="triangle-svg" viewBox="0 0 320 260">
+          <polygon points="160,20 30,240 290,240" />
+          <text x="50" y="180" text-anchor="middle">Accuracy</text>
+          <text x="280" y="180" text-anchor="middle">Adaptability</text>
+          <text x="160" y="40" text-anchor="middle">Explainability</text>
+          <text x="160" y="150" text-anchor="middle" font-size="1.8em">
             Effectiveness
           </text>
         </svg>
@@ -299,9 +291,9 @@
       </table>
     </section>
 
-    <!-- Attribute Explanations Section -->
+    <!-- Criteria for Model Evaluation Section -->
     <section class="attribute-explanations">
-      <h2>Attribute Explanations</h2>
+      <h2>Criteria for Model Evaluation</h2>
       <ul>
         <li>
           <span>Accuracy:</span> Measures the precision and recall of anomaly detection. A higher rating means fewer false positives and negatives.
@@ -358,16 +350,8 @@
             ></a>
           </div>
           <div class="footer__certifications">
-            <img
-              src="img/native-app-accelerator-badge.png"
-              alt="Native App Accelerator Badge"
-              class="footer-cert-logo"
-            />
-            <img
-              src="img/nvidia-inception-program-badge.png"
-              alt="Nvidia Inception Program Badge"
-              class="footer-cert-logo"
-            />
+            <img src="img/native-app-accelerator-badge.png" alt="Native App Accelerator Badge" class="footer-cert-logo" />
+            <img src="img/nvidia-inception-program-badge.png" alt="Nvidia Inception Program Badge" class="footer-cert-logo" />
           </div>
         </div>
         <div class="col-1-of-2">
