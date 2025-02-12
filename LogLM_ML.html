@@ -308,12 +308,14 @@
         </li>
       </ul>
     </div>
-    <!-- Right Column: Enlarged Triangle Diagram -->
-    <div style="flex: 1; padding: 2rem; display: flex; justify-content: center; align-items: center; min-width: 300px;">
+<!-- Right Column: Triangle Diagram -->
+    <div class="col-1-of-2" style="min-width: 300px; padding: 2rem; display: flex; justify-content: center; align-items: center;">
       <svg class="triangle-svg" viewBox="0 0 340 260" style="width: 350px; height: 300px;">
-        <polygon points="170,20 40,240 310,240" fill="rgba(255,230,230,0.7)" stroke="#ff2702" stroke-width="2" />
+        <!-- Adjust polygon: rightmost point moved from 310 to 300 -->
+        <polygon points="170,20 40,240 300,240" fill="rgba(255,230,230,0.7)" stroke="#ff2702" stroke-width="2" />
+        <!-- Position text elements -->
         <text x="70" y="180" text-anchor="middle" style="fill:#ff2702; font-weight:600; font-size:1.8rem;">Accuracy</text>
-        <text x="310" y="180" text-anchor="middle" style="fill:#ff2702; font-weight:600; font-size:1.8rem;" transform="translate(-10,0)">Adaptability</text>
+        <text x="300" y="180" text-anchor="middle" style="fill:#ff2702; font-weight:600; font-size:1.8rem;">Adaptability</text>
         <text x="170" y="40" text-anchor="middle" style="fill:#ff2702; font-weight:600; font-size:1.8rem;">Explainability</text>
         <text x="170" y="150" text-anchor="middle" style="fill:#ff2702; font-size:2rem;">Effectiveness</text>
       </svg>
