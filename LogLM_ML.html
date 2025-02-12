@@ -287,20 +287,18 @@
       </table>
     </section>
 
-<!-- Model Criteria Section: Text on Left, Triangle on Right -->
+<!-- Model Criteria Section: Two-column layout with text on left and triangle on right -->
 <section class="section-content model-criteria-section">
-  <div class="row" style="display: flex; flex-wrap: wrap; align-items: center;">
-    <!-- Left Column: Text -->
-    <div class="col-1-of-2" style="flex: 1; padding: 2rem; min-width: 300px; font-size: 1rem; text-align: left;">
-      <h2 style="font-size: 3rem; margin-bottom: 2rem;">Model Criteria</h2>
-      <p>
-        While <span style="color: #ff2702; font-weight: 600;">Accuracy</span> is crucial, so for security operations, so too are 
-        <span style="color: #ff2702; font-weight: 600;">Adaptability</span> and 
-        <span style="color: #ff2702; font-weight: 600;">Explainability</span>.
+  <div style="display: flex; flex-wrap: wrap; align-items: center;">
+    <!-- Left Column: Model Criteria Text -->
+    <div style="flex: 1; padding: 2rem; min-width: 300px;">
+      <h2 style="font-size: 4rem; margin-bottom: 2rem; text-align: left;">Model Criteria</h2>
+      <p style="font-size: 2rem; line-height: 1.8; text-align: left;">
+        While <span style="color: #ff2702; font-weight: 600;">Accuracy</span> is crucial for security operations, so too are <span style="color: #ff2702; font-weight: 600;">Adaptability</span> and <span style="color: #ff2702; font-weight: 600;">Explainability</span>.
       </p>
-      <ul style="list-style: disc inside; margin-top: 1rem; line-height: 1.8;">
+      <ul style="font-size: 2rem; line-height: 1.8; text-align: left; list-style: disc inside; margin-top: 1rem;">
         <li>
-          <span style="color: #ff2702; font-weight: 600;">Accuracy:</span> Both low false positives and low false negatives are crucial. Low false positives reduce the burden on your security team, and low false negatives indicate how effective the model is in protecting your organization.
+          <span style="color: #ff2702; font-weight: 600;">Accuracy:</span> Both low false positives and low false negatives are crucial. Low false positives reduce the burden on your security team, while low false negatives indicate how effective the model is in protecting your organization.
         </li>
         <li>
           <span style="color: #ff2702; font-weight: 600;">Adaptability:</span> Foundation models like a LogLM quickly transfer knowledge from previous environments to new ones, reducing the time to value and minimizing the operational burden of retraining.
@@ -310,16 +308,14 @@
         </li>
       </ul>
     </div>
-    <!-- Right Column: Triangle Diagram -->
-    <div class="col-1-of-2" style="flex: 1; padding: 2rem; display: flex; justify-content: center; align-items: center; min-width: 300px;">
-      <svg class="triangle-svg" viewBox="0 0 360 300" style="width: 370px; height: 320px;">
-        <!-- Updated polygon coordinates for a larger triangle -->
-        <polygon points="180,30 50,270 330,270" fill="rgba(255,230,230,0.7)" stroke="#ff2702" stroke-width="2" />
-        <!-- Adjusted text positions -->
-        <text x="90" y="230" text-anchor="middle" style="fill:#ff2702; font-weight:600; font-size:1.8rem;">Accuracy</text>
-        <text x="320" y="230" text-anchor="middle" style="fill:#ff2702; font-weight:600; font-size:1.8rem;" transform="translate(-10,0)">Adaptability</text>
-        <text x="180" y="60" text-anchor="middle" style="fill:#ff2702; font-weight:600; font-size:1.8rem;">Explainability</text>
-        <text x="180" y="180" text-anchor="middle" style="fill:#ff2702; font-size:2rem;">Effectiveness</text>
+    <!-- Right Column: Enlarged Triangle Diagram -->
+    <div style="flex: 1; padding: 2rem; display: flex; justify-content: center; align-items: center; min-width: 300px;">
+      <svg class="triangle-svg" viewBox="0 0 340 260" style="width: 350px; height: 300px;">
+        <polygon points="170,20 40,240 310,240" fill="rgba(255,230,230,0.7)" stroke="#ff2702" stroke-width="2" />
+        <text x="70" y="180" text-anchor="middle" style="fill:#ff2702; font-weight:600; font-size:1.8rem;">Accuracy</text>
+        <text x="310" y="180" text-anchor="middle" style="fill:#ff2702; font-weight:600; font-size:1.8rem;" transform="translate(-10,0)">Adaptability</text>
+        <text x="170" y="40" text-anchor="middle" style="fill:#ff2702; font-weight:600; font-size:1.8rem;">Explainability</text>
+        <text x="170" y="150" text-anchor="middle" style="fill:#ff2702; font-size:2rem;">Effectiveness</text>
       </svg>
     </div>
   </div>
