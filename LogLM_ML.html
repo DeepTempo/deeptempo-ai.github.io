@@ -126,7 +126,7 @@
         justify-content: center;
         align-items: center;
       }
-      /* Triangle diagram styling – larger size with adjusted viewBox so text isn’t cut off */
+      /* Triangle diagram styling – larger size, adjusted viewBox so text isn’t cut off */
       .triangle-svg {
         width: 300px;
         height: 260px;
@@ -201,20 +201,6 @@
           <span style="color: #ff2702;">adaptability</span>, and improved 
           <span style="color: #ff2702;">explainability</span>.
         </p>
-      </div>
-    </section>
-
-    <!-- Triangle Diagram Section (moved above the table) -->
-    <section class="section-content">
-      <h2 class="heading-secondary">Key Attributes Visualized</h2>
-      <div class="triangle-container">
-        <svg class="triangle-svg" viewBox="0 0 340 260">
-          <polygon points="170,20 40,240 310,240" />
-          <text x="70" y="180" text-anchor="middle" class="accuracy">Accuracy</text>
-          <text x="310" y="180" text-anchor="middle" class="adaptability">Adaptability</text>
-          <text x="170" y="40" text-anchor="middle">Explainability</text>
-          <text x="170" y="150" text-anchor="middle" font-size="2rem">Effectiveness</text>
-        </svg>
       </div>
     </section>
 
@@ -317,7 +303,7 @@
               <span>Adaptability:</span> Foundation models like a LogLM quickly transfer knowledge from previous environments to new ones, reducing the time to value and minimizing the operational burden of retraining.
             </li>
             <li>
-              <span>Explainability:</span> To be useful for security teams, LogLMs must provide clear context—such as impacted entities and correlations with MITRE ATT&CK patterns.
+              <span>Explainability:</span> For security teams to act on alerts, LogLMs must provide clear context—such as impacted entities and correlations with MITRE ATT&CK patterns.
             </li>
           </ul>
         </div>
