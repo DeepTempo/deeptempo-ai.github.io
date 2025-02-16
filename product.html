@@ -112,6 +112,96 @@
                 </div>
             </div>
         </section>
+
+        <!-- ==================== NVIDIA-Powered Pipeline Section ==================== -->
+<section class="features-section" style="margin-top: 3rem;">
+    <div class="features-container">
+        <div class="u-center-text">
+            <h2 class="heading-secondary">Our NVIDIA-Powered Pipeline</h2>
+        </div>
+        <p class="paragraph u-center-text">
+            From enterprise log ingestion to large-scale pretraining and real-time inference,
+            our Tempo LogLM harnesses the entire NVIDIA software stack to deliver unparalleled
+            performance on security data—whether on-premise or in the cloud.
+        </p>
+        
+        <!-- Pipeline Steps in a Row -->
+        <div class="features-row pipeline-steps" style="justify-content: center; align-items: flex-start;">
+            
+            <!-- STEP 1: Data Ingestion & Adaptive Parsing -->
+            <div class="feature-card pipeline-step" style="min-width: 220px;">
+                <div class="feature-icon">
+                    <i class="fas fa-database"></i>
+                </div>
+                <h3 class="feature-title">Data Ingestion & Parsing</h3>
+                <p class="feature-description">
+                    <strong>Morpheus</strong> ingests high-volume logs (e.g., NetFlow), while
+                    <strong>RAPIDS</strong> (cuDF, cuML) provides adaptive, GPU-accelerated
+                    parsing—keeping data on the GPU for maximum throughput and real-time speed.
+                </p>
+            </div>
+
+            <!-- ARROW 1 -->
+            <div class="feature-card arrow-step" style="border: none; box-shadow: none;">
+                <i class="fas fa-arrow-right" style="font-size: 2rem; margin: 1rem;"></i>
+            </div>
+
+            <!-- STEP 2: Pretraining -->
+            <div class="feature-card pipeline-step" style="min-width: 220px;">
+                <div class="feature-icon">
+                    <i class="fas fa-layer-group"></i>
+                </div>
+                <h3 class="feature-title">Pretraining</h3>
+                <p class="feature-description">
+                    Utilizing <strong>NVIDIA HPC clusters</strong> (DGX servers or GPU-enabled data centers)
+                    and containers from <strong>NVIDIA NGC</strong>, we harness <strong>CUDA</strong>
+                    and <strong>cuDNN</strong> to pretrain Tempo LogLM on vast corpora of security logs—ensuring
+                    a robust foundation for threat detection.
+                </p>
+            </div>
+
+            <!-- ARROW 2 -->
+            <div class="feature-card arrow-step" style="border: none; box-shadow: none;">
+                <i class="fas fa-arrow-right" style="font-size: 2rem; margin: 1rem;"></i>
+            </div>
+
+            <!-- STEP 3: Fine Tuning -->
+            <div class="feature-card pipeline-step" style="min-width: 220px;">
+                <div class="feature-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h3 class="feature-title">Fine Tuning</h3>
+                <p class="feature-description">
+                    We adapt Tempo LogLM to specific organizations or new security patterns
+                    using <strong>multi-GPU</strong> fine tuning (PyTorch, TensorFlow, etc.),
+                    accelerating updates with <strong>CUDA</strong> and <strong>NCCL</strong>.
+                </p>
+            </div>
+
+            <!-- ARROW 3 -->
+            <div class="feature-card arrow-step" style="border: none; box-shadow: none;">
+                <i class="fas fa-arrow-right" style="font-size: 2rem; margin: 1rem;"></i>
+            </div>
+
+            <!-- STEP 4: Inference -->
+            <div class="feature-card pipeline-step" style="min-width: 220px;">
+                <div class="feature-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h3 class="feature-title">Inference</h3>
+                <p class="feature-description">
+                    <strong>NVIDIA Triton Inference Server</strong> or
+                    <strong>NVIDIA Inference Microservices (NIM)</strong> deliver real-time
+                    threat detection—optimized with <strong>TensorRT</strong> for lightning-fast,
+                    GPU-accelerated inference on-prem or in the cloud.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- ================= End of NVIDIA-Powered Pipeline Section ================= -->
+
         
         <section class="cta-section">
             <a href="https://app.snowflake.com/marketplace/listing/GZTYZOYXHP3/deeptempo-cybersecurity-tempo?search=deep%20tempo" target="_blank" class="cta-button">Try Now on Snowflake Marketplace</a>
