@@ -1157,6 +1157,25 @@ only screen and (min-width: 125em) {
     transition: transform 0.3s, background-color 0.3s;
 }
 
+.pipeline-step:not(:last-child) {
+    position: relative; /* Enable absolute positioning for the pseudo-element */
+}
+
+/* Pseudo-element for the arrow */
+.pipeline-step:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 50%;           /* Center vertically relative to the card */
+    right: -30px;       /* Adjust so the arrow appears between this card and the next */
+    transform: translateY(-50%);
+    width: 24px;        /* Adjust width as needed */
+    height: 24px;       /* Adjust height as needed */
+    background: url('img/right-arrow.png') no-repeat center center;
+    background-size: contain;
+    z-index: -1;        /* Place behind the card */
+}
+
+
 .feature-icon {
     font-size: 3rem;
     color: #ff2702;
