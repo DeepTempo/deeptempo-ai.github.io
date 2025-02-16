@@ -1157,17 +1157,6 @@ only screen and (min-width: 125em) {
     transition: transform 0.3s, background-color 0.3s;
 }
 
-/* Add a right arrow after every pipeline step except the last one */
-.pipeline-step:not(:last-child)::after {
-    content: "\f061"; /* Font Awesome right arrow icon */
-    font-family: "Font Awesome 5 Free"; /* Ensure this matches your Font Awesome version */
-    font-weight: 900;
-    font-size: 2rem;
-    margin-left: 1rem; /* Adjust spacing as needed */
-    vertical-align: middle;
-}
-
-
 .feature-icon {
     font-size: 3rem;
     color: #ff2702;
