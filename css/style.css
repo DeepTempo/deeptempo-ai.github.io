@@ -654,6 +654,40 @@ only screen and (min-width: 125em) {
     }
 }
 
+/* Dropdown styling for Resources menu */
+.navbar__list li.dropdown {
+    position: relative;
+}
+
+.navbar__list li.dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333; /* Adjust to match your navbar background */
+    min-width: 160px;
+    z-index: 1000;
+}
+
+.navbar__list li.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.navbar__list li.dropdown .dropdown-content li {
+    list-style: none;
+}
+
+.navbar__list li.dropdown .dropdown-content li a {
+    padding: 10px 15px;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+.navbar__list li.dropdown .dropdown-content li a:hover {
+    background-color: #555;
+}
+
+
+
 .header__logo-box {
     position: absolute;
     top: 4rem;
