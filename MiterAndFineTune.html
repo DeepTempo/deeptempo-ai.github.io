@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+        
+        <title>DeepTempo | Cybersecurity powered by Deep Learning</title>
+        <style>
+            /* Ensure hero titles are centered */
+            .hero-title,
+            .hero-subtitle {
+              text-align: center;
+            }
+      
+            /* Introduction container with background overlay */
+            .intro-container {
+              text-align: center;
+              padding: 3rem 2rem;
+              margin: 2rem auto 4rem auto;
+              max-width: 900px;
+              border-radius: 8px;
+              background: linear-gradient(
+                  rgba(255, 255, 255, 0.85),
+                  rgba(255, 255, 255, 0.85)
+                ),
+                url('img/intro-bg.jpg');
+              background-size: cover;
+              background-position: center;
+            }
+            .intro-container p {
+              font-size: 2.2rem;
+              line-height: 1.7;
+            }
+      
+            /* UEBA Comparison section: Centered heading and paragraph */
+            .section-content h2 {
+              text-align: center !important;
+              font-size: 4rem !important;
+              margin-bottom: 2rem !important;
+            }
+            .section-content p {
+              text-align: center !important;
+              font-size: 2.2rem !important;
+              margin-bottom: 3rem !important;
+            }
+      
+            /* Comparison table styling */
+            .comparison-table {
+              width: 90%;
+              margin: 0 auto 4rem auto;
+              border-collapse: collapse;
+              font-size: 2rem;
+            }
+            .comparison-table th,
+            .comparison-table td {
+              border: 1px solid #ddd;
+              padding: 1.5rem;
+              text-align: center;
+            }
+            .comparison-table th {
+              background: #ff2702;
+              color: #fff;
+            }
+      
+            /* MODEL CRITERIA SECTION: Two columns layout */
+            .model-criteria-section {
+              width: 90%;
+              max-width: 1000px;
+              margin: 4rem auto;
+              font-size: 2rem;
+              line-height: 1.8;
+            }
+            .model-criteria-section .row {
+              display: flex;
+              flex-wrap: wrap;
+              align-items: center;
+            }
+            .model-criteria-section .col-1-of-2 {
+              width: 50%;
+              padding: 2rem;
+            }
+            /* Left Column: Text styling */
+            .model-criteria-section h2 {
+              text-align: left;
+              font-size: 4rem;
+              margin-bottom: 2rem;
+            }
+            .model-criteria-section p,
+            .model-criteria-section ul {
+              font-size: 2.2rem;
+              line-height: 1.8;
+              text-align: left;
+            }
+            .model-criteria-section ul {
+              list-style: disc inside;
+              margin-top: 1rem;
+            }
+            .model-criteria-section li span {
+              font-weight: 600;
+              color: #ff2702;
+            }
+            /* Right Column: Center the triangle diagram */
+            .model-criteria-section .col-1-of-2 {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+            /* Triangle diagram styling – larger size, adjusted viewBox so text isn’t cut off */
+            .triangle-svg {
+              width: 300px;
+              height: 260px;
+            }
+            /* Use viewBox="0 0 340 260" with polygon points "170,20 40,240 310,240" for extra right margin */
+            .triangle-svg polygon {
+              fill: rgba(255, 230, 230, 0.7);
+              stroke: #ff2702;
+              stroke-width: 2;
+            }
+            .triangle-svg text {
+              fill: #ff2702;
+              font-weight: 600;
+              font-size: 1.8rem;
+            }
+          </style>
+    </head>
+
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9EGVJW1TZT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-9EGVJW1TZT');
+    </script>
+
+    <!-- Start of HubSpot Embed Code -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/48299015.js"></script>
+    <!-- End of HubSpot Embed Code -->
+    
+    <body>
+        <header class="navbar">
+            <div class="navbar__logo">
+                <img src="img/logo-full-color.png" alt="DeepTempo Logo">
+            </div>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <nav class="navbar__nav" id="navbar-overlay">
+                <ul class="navbar__list">
+                    <li class="navbar__item"><a href="index.html" class="navbar__link active">Home</a></li>
+                    <li class="navbar__item"><a href="product.html" class="navbar__link">Product</a></li>
+                    <li class="navbar__item"><a href="about-us.html" class="navbar__link">About Us</a></li>
+                    <li class="navbar__item"><a href="https://medium.com/deeptempo" target="_blank" class="navbar__link">Blog</a></li>
+                    <li class="navbar__item"><a href="http://docs.deeptempo.ai/" target="_blank" class="navbar__link">Documentation</a></li>
+                    <li class="navbar__item"><a href="contact-us.html" class="navbar__link">Contact Us</a></li>
+                </ul>
+                <div class="navbar__close" id="close-menu">&times;</div>
+            </nav>
+        </header>
+             <section class="hero-section">
+          <div class="hero-section-content">
+              <h1 class="hero-title">DeepTempo Enhances Cybersecurity with Fine-Tuning and MITRE Mapping</h1>
+              <p class="hero-subtitle">Discover how DeepTempo boosts threat detection accuracy with deep learning and Snowflake integration.</p>
+              <p class="intro-text">DeepTempo, a leading cybersecurity solution provider, has announced exciting new capabilities for its Tempo solution, now available as a Snowflake Native App. With advanced fine-tuning, MITRE mapping integration, and compatibility with existing SIEM systems, security teams can now map detected anomalies to MITRE ATT&CK sequences, enhancing context and insights. The solution also allows for seamless operation within existing workflows, improving protection and reducing costs.</p>
+          </div>
+      </section>
+
+      <article>
+          <img src="images/deeptempo-cybersecurity.jpg" alt="DeepTempo Cybersecurity Solution" />
+          <p>DeepTempo has unveiled significant updates to its deep learning-powered cybersecurity solution, Tempo. Designed as a Snowflake Native App, Tempo now enhances threat detection and response capabilities with fine-tuning and MITRE mapping. This boosts the accuracy of threat detection while reducing response times, showcasing the power of the Snowflake Native App Framework.</p>
+          
+          <p><strong>Seamless Integration with Existing Systems</strong></p>
+          <p>Evan Powell, founder and CEO of DeepTempo, highlights that Tempo integrates effortlessly with existing SIEM systems. This allows security teams to utilize their current setups while gaining enhanced intelligence from Tempo. Powered by Snowflake Cortex AI, the solution offers improved protection at reduced costs.</p>
+          
+          <p><strong>Advanced Fine-Tuning Capabilities</strong></p>
+          <p>Tempo’s fine-tuning allows organizations to adapt the solution to their specific needs, ensuring accurate threat detection. Operating upstream from a customer’s SIEM, enriched data flows into existing workflows, enhancing efficiency without additional data movement.</p>
+          
+          <p><strong>Speed and Precision in Threat Response</strong></p>
+          <p>With MITRE ATT&CK flagged alerts, security teams can execute response plans with unmatched speed and precision. This integration significantly reduces mean time to respond (MTTR), saving critical minutes or hours during active threats.</p>
+          
+          <p><strong>Efficient Data Handling</strong></p>
+          <p>Using network and cloud flow logs, Tempo identifies common cyber threats, tagging sequences with MITRE ATT&CK techniques. Compact data representations, or embeddings, ensure faster analytics and reduced costs.</p>
+          
+          <p><a href="https://www.deeptempo.ai">Learn more about DeepTempo's innovative solutions</a> and follow them on <a href="https://www.linkedin.com/company/deeptempo">LinkedIn</a>, <a href="https://www.youtube.com/channel/deeptempo">YouTube</a>, and <a href="https://medium.com/@deeptempo">Medium</a>.</p>
+          
+          <p>For more details, visit the <a href="https://www.businesswire.com/news/home/20250225005555/en/DeepTempo-Enhances-Cybersecurity-with-Fine-Tuning-and-MITRE-Mapping">original press release</a>.</p>
+          
+          <p class="call-to-action">Strengthen your cybersecurity strategy today with DeepTempo’s advanced solutions. <a href="https://www.deeptempo.ai/contact">Contact us</a> for a demo!</p>
+      </article>
+        <footer class="footer">
+            <div class="row">
+                <div class="col-1-of-2">
+                    <ul class="footer-nav">
+                        <li>&copy; DeepTempo.ai - 2024. All rights reserved.</li>
+                        <li><a href="docs/DeepTempo - Privacy Policy for Snowflake NativeApp.pdf">Privacy</a></li>
+                        <li><a href="docs/Getting Started with TEMPO.pdf">Documentation</a></li>
+                    </ul>
+                    <div class="footer__social-media">
+                        <a href="https://www.youtube.com/@DeepTempo-ai" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/groups/13114314/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.reddit.com/r/DeepTempo/" target="_blank"><i class="fab fa-reddit"></i></a>
+                        <a href="https://medium.com/deeptempo" target="_blank"><i class="fab fa-medium"></i></a>
+                        <!-- <a href="https://www.instagram.com/deep.tempo/" target="_blank"><i class="fab fa-instagram"></i></a> -->
+                        <!-- <a href="https://www.linkedin.com/company/deeptempo/" target="_blank"><i class="fab fa-facebook"></i></a> -->
+                    </div>
+                    <div class="footer__certifications">
+                        <img src="img/native-app-accelerator-badge.png" alt="Native App Accelerator Badge" class="footer-cert-logo">
+                        <img src="img/nvidia-inception-program-badge.png" alt="Nvidia Inception Program Badge" class="footer-cert-logo">
+                    </div>
+                </div>
+                <div class="col-1-of-2">
+                    <picture class="footer__logo">
+                        <img alt="Full logo" src="img/logo-full-color.png">
+                    </picture>
+                    <p class="footer__copyright">
+                        DeepTempo was built by a team of deep learning engineers and enterprise system builders, many of whom have spent years in security operations teams.  We believe in harnessing collective defense for cyber security via deep learning, to make the lives of security operations teams better while restoring the initiative to the defenders.
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navbarNav = document.getElementById('navbar-overlay');
+            const closeMenu = document.getElementById('close-menu');
+
+            mobileMenu.addEventListener('click', () => {
+                navbarNav.classList.add('active');
+            });
+
+            closeMenu.addEventListener('click', () => {
+                navbarNav.classList.remove('active');
+            });
+        </script>
+        <!-- Start of HubSpot Embed Code -->
+        <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/48299015.js"></script>
+        <!-- End of HubSpot Embed Code -->
+    </body>
+</html>
