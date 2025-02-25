@@ -8,128 +8,440 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
-
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        
         <link rel="shortcut icon" type="image/png" href="img/favicon.png">
         
         <title>DeepTempo | Cybersecurity powered by Deep Learning</title>
         <style>
+            /* Base styles and resets */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            
+            html {
+                font-size: 62.5%; /* 1rem = 10px */
+                font-family: 'Lexend', sans-serif;
+                scroll-behavior: smooth;
+            }
+            
+            body {
+                font-size: 1.6rem;
+                line-height: 1.5;
+                color: #333;
+                background-color: #fff;
+            }
+            
+            /* Utility classes */
+            .row {
+                max-width: 120rem;
+                margin: 0 auto;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            
+            .col-1-of-2 {
+                width: 50%;
+                padding: 2rem;
+            }
+            
+            /* Navbar styles */
+            .navbar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1.5rem 5%;
+                background-color: #fff;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                position: sticky;
+                top: 0;
+                z-index: 100;
+            }
+            
+            .navbar__logo img {
+                height: 4rem;
+            }
+            
+            .navbar__nav {
+                display: flex;
+                align-items: center;
+            }
+            
+            .navbar__list {
+                display: flex;
+                list-style: none;
+            }
+            
+            .navbar__item {
+                margin: 0 1.5rem;
+            }
+            
+            .navbar__link {
+                text-decoration: none;
+                color: #333;
+                font-size: 1.8rem;
+                font-weight: 500;
+                transition: color 0.3s;
+            }
+            
+            .navbar__link:hover,
+            .navbar__link.active {
+                color: #ff2702;
+            }
+            
+            .navbar__toggle, .navbar__close {
+                display: none;
+            }
+            
+            /* Hero section */
+            .hero {
+                height: 80vh;
+                background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/hero-bg.jpg');
+                background-size: cover;
+                background-position: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: #fff;
+                padding: 0 2rem;
+            }
+            
             /* Ensure hero titles are centered */
             .hero-title,
             .hero-subtitle {
-              text-align: center;
+                text-align: center;
             }
-      
+            
+            .hero-title {
+                font-size: 5rem;
+                font-weight: 700;
+                margin-bottom: 2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 2.5rem;
+                margin-bottom: 3rem;
+            }
+            
             /* Introduction container with background overlay */
             .intro-container {
-              text-align: center;
-              padding: 3rem 2rem;
-              margin: 2rem auto 4rem auto;
-              max-width: 900px;
-              border-radius: 8px;
-              background: linear-gradient(
-                  rgba(255, 255, 255, 0.85),
-                  rgba(255, 255, 255, 0.85)
+                text-align: center;
+                padding: 3rem 2rem;
+                margin: 2rem auto 4rem auto;
+                max-width: 900px;
+                border-radius: 8px;
+                background: linear-gradient(
+                    rgba(255, 255, 255, 0.85),
+                    rgba(255, 255, 255, 0.85)
                 ),
                 url('img/intro-bg.jpg');
-              background-size: cover;
-              background-position: center;
+                background-size: cover;
+                background-position: center;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             }
+            
             .intro-container p {
-              font-size: 2.2rem;
-              line-height: 1.7;
+                font-size: 2.2rem;
+                line-height: 1.7;
             }
-      
+            
+            /* Section styles */
+            .section {
+                padding: 5rem 2rem;
+            }
+            
+            .section-content {
+                max-width: 120rem;
+                margin: 0 auto;
+            }
+            
             /* UEBA Comparison section: Centered heading and paragraph */
             .section-content h2 {
-              text-align: center !important;
-              font-size: 4rem !important;
-              margin-bottom: 2rem !important;
+                text-align: center !important;
+                font-size: 4rem !important;
+                margin-bottom: 2rem !important;
+                color: #333;
             }
+            
             .section-content p {
-              text-align: center !important;
-              font-size: 2.2rem !important;
-              margin-bottom: 3rem !important;
+                text-align: center !important;
+                font-size: 2.2rem !important;
+                margin-bottom: 3rem !important;
             }
-      
+            
             /* Comparison table styling */
             .comparison-table {
-              width: 90%;
-              margin: 0 auto 4rem auto;
-              border-collapse: collapse;
-              font-size: 2rem;
+                width: 90%;
+                margin: 0 auto 4rem auto;
+                border-collapse: collapse;
+                font-size: 2rem;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             }
+            
             .comparison-table th,
             .comparison-table td {
-              border: 1px solid #ddd;
-              padding: 1.5rem;
-              text-align: center;
+                border: 1px solid #ddd;
+                padding: 1.5rem;
+                text-align: center;
             }
+            
             .comparison-table th {
-              background: #ff2702;
-              color: #fff;
+                background: #ff2702;
+                color: #fff;
             }
-      
+            
+            .comparison-table tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+            
             /* MODEL CRITERIA SECTION: Two columns layout */
             .model-criteria-section {
-              width: 90%;
-              max-width: 1000px;
-              margin: 4rem auto;
-              font-size: 2rem;
-              line-height: 1.8;
+                width: 90%;
+                max-width: 1000px;
+                margin: 4rem auto;
+                font-size: 2rem;
+                line-height: 1.8;
             }
+            
             .model-criteria-section .row {
-              display: flex;
-              flex-wrap: wrap;
-              align-items: center;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
             }
+            
             .model-criteria-section .col-1-of-2 {
-              width: 50%;
-              padding: 2rem;
+                width: 50%;
+                padding: 2rem;
             }
+            
             /* Left Column: Text styling */
             .model-criteria-section h2 {
-              text-align: left;
-              font-size: 4rem;
-              margin-bottom: 2rem;
+                text-align: left;
+                font-size: 4rem;
+                margin-bottom: 2rem;
+                color: #333;
             }
+            
             .model-criteria-section p,
             .model-criteria-section ul {
-              font-size: 2.2rem;
-              line-height: 1.8;
-              text-align: left;
+                font-size: 2.2rem;
+                line-height: 1.8;
+                text-align: left;
             }
+            
             .model-criteria-section ul {
-              list-style: disc inside;
-              margin-top: 1rem;
+                list-style: disc inside;
+                margin-top: 1rem;
+                padding-left: 2rem;
             }
+            
             .model-criteria-section li span {
-              font-weight: 600;
-              color: #ff2702;
+                font-weight: 600;
+                color: #ff2702;
             }
+            
             /* Right Column: Center the triangle diagram */
             .model-criteria-section .col-1-of-2 {
-              display: flex;
-              justify-content: center;
-              align-items: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
-            /* Triangle diagram styling – larger size, adjusted viewBox so text isn’t cut off */
+            
+            /* Triangle diagram styling */
             .triangle-svg {
-              width: 300px;
-              height: 260px;
+                width: 300px;
+                height: 260px;
             }
-            /* Use viewBox="0 0 340 260" with polygon points "170,20 40,240 310,240" for extra right margin */
+            
             .triangle-svg polygon {
-              fill: rgba(255, 230, 230, 0.7);
-              stroke: #ff2702;
-              stroke-width: 2;
+                fill: rgba(255, 230, 230, 0.7);
+                stroke: #ff2702;
+                stroke-width: 2;
             }
+            
             .triangle-svg text {
-              fill: #ff2702;
-              font-weight: 600;
-              font-size: 1.8rem;
+                fill: #ff2702;
+                font-weight: 600;
+                font-size: 1.8rem;
             }
-          </style>
+            
+            /* Footer styles */
+            .footer {
+                background-color: #f9f9f9;
+                padding: 5rem 2rem;
+                margin-top: 5rem;
+                border-top: 1px solid #eee;
+            }
+            
+            .footer-nav {
+                list-style: none;
+                display: flex;
+                flex-wrap: wrap;
+                margin-bottom: 2rem;
+            }
+            
+            .footer-nav li {
+                margin-right: 2rem;
+                margin-bottom: 1rem;
+                font-size: 1.6rem;
+            }
+            
+            .footer-nav a {
+                text-decoration: none;
+                color: #555;
+                transition: color 0.3s;
+            }
+            
+            .footer-nav a:hover {
+                color: #ff2702;
+            }
+            
+            .footer__social-media {
+                margin-bottom: 2rem;
+            }
+            
+            .footer__social-media a {
+                display: inline-block;
+                margin-right: 1.5rem;
+                font-size: 2.4rem;
+                color: #555;
+                transition: color 0.3s;
+            }
+            
+            .footer__social-media a:hover {
+                color: #ff2702;
+            }
+            
+            .footer__certifications {
+                display: flex;
+                align-items: center;
+                margin-bottom: 2rem;
+            }
+            
+            .footer-cert-logo {
+                height: 5rem;
+                margin-right: 2rem;
+            }
+            
+            .footer__logo img {
+                height: 5rem;
+                margin-bottom: 2rem;
+            }
+            
+            .footer__copyright {
+                font-size: 1.6rem;
+                color: #555;
+                line-height: 1.6;
+            }
+            
+            /* Responsive styles */
+            @media screen and (max-width: 992px) {
+                html {
+                    font-size: 56.25%; /* 1rem = 9px */
+                }
+                
+                .col-1-of-2 {
+                    width: 100%;
+                }
+                
+                .model-criteria-section .row {
+                    flex-direction: column;
+                }
+            }
+            
+            @media screen and (max-width: 768px) {
+                html {
+                    font-size: 50%; /* 1rem = 8px */
+                }
+                
+                .navbar__toggle {
+                    display: flex;
+                    flex-direction: column;
+                    cursor: pointer;
+                }
+                
+                .bar {
+                    width: 3rem;
+                    height: 0.3rem;
+                    background-color: #333;
+                    margin: 0.3rem 0;
+                    transition: 0.3s;
+                }
+                
+                .navbar__nav {
+                    position: fixed;
+                    top: 0;
+                    right: -100%;
+                    width: 80%;
+                    height: 100%;
+                    background-color: #fff;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    transition: 0.5s;
+                    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+                }
+                
+                .navbar__nav.active {
+                    right: 0;
+                }
+                
+                .navbar__list {
+                    flex-direction: column;
+                    align-items: center;
+                }
+                
+                .navbar__item {
+                    margin: 1.5rem 0;
+                }
+                
+                .navbar__close {
+                    display: block;
+                    position: absolute;
+                    top: 2rem;
+                    right: 2rem;
+                    font-size: 3rem;
+                    cursor: pointer;
+                }
+                
+                .comparison-table {
+                    font-size: 1.6rem;
+                }
+                
+                .intro-container p, 
+                .section-content p {
+                    font-size: 1.8rem !important;
+                }
+                
+                .section-content h2,
+                .model-criteria-section h2 {
+                    font-size: 3rem !important;
+                }
+            }
+            
+            @media screen and (max-width: 576px) {
+                .footer-nav {
+                    flex-direction: column;
+                }
+                
+                .footer-nav li {
+                    margin-bottom: 1rem;
+                }
+                
+                .footer__certifications {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+                
+                .footer-cert-logo {
+                    margin-bottom: 1rem;
+                }
+            }
+        </style>
     </head>
 
     
@@ -169,36 +481,79 @@
                 <div class="navbar__close" id="close-menu">&times;</div>
             </nav>
         </header>
-             <section class="hero-section">
-          <div class="hero-section-content">
-              <h1 class="hero-title">DeepTempo Enhances Cybersecurity with Fine-Tuning and MITRE Mapping</h1>
-              <p class="hero-subtitle">Discover how DeepTempo boosts threat detection accuracy with deep learning and Snowflake integration.</p>
-              <p class="intro-text">DeepTempo, a leading cybersecurity solution provider, has announced exciting new capabilities for its Tempo solution, now available as a Snowflake Native App. With advanced fine-tuning, MITRE mapping integration, and compatibility with existing SIEM systems, security teams can now map detected anomalies to MITRE ATT&CK sequences, enhancing context and insights. The solution also allows for seamless operation within existing workflows, improving protection and reducing costs.</p>
-          </div>
-      </section>
-
-      <article>
-          <img src="images/deeptempo-cybersecurity.jpg" alt="DeepTempo Cybersecurity Solution" />
-          <p>DeepTempo has unveiled significant updates to its deep learning-powered cybersecurity solution, Tempo. Designed as a Snowflake Native App, Tempo now enhances threat detection and response capabilities with fine-tuning and MITRE mapping. This boosts the accuracy of threat detection while reducing response times, showcasing the power of the Snowflake Native App Framework.</p>
-          
-          <p><strong>Seamless Integration with Existing Systems</strong></p>
-          <p>Evan Powell, founder and CEO of DeepTempo, highlights that Tempo integrates effortlessly with existing SIEM systems. This allows security teams to utilize their current setups while gaining enhanced intelligence from Tempo. Powered by Snowflake Cortex AI, the solution offers improved protection at reduced costs.</p>
-          
-          <p><strong>Advanced Fine-Tuning Capabilities</strong></p>
-          <p>Tempo’s fine-tuning allows organizations to adapt the solution to their specific needs, ensuring accurate threat detection. Operating upstream from a customer’s SIEM, enriched data flows into existing workflows, enhancing efficiency without additional data movement.</p>
-          
-          <p><strong>Speed and Precision in Threat Response</strong></p>
-          <p>With MITRE ATT&CK flagged alerts, security teams can execute response plans with unmatched speed and precision. This integration significantly reduces mean time to respond (MTTR), saving critical minutes or hours during active threats.</p>
-          
-          <p><strong>Efficient Data Handling</strong></p>
-          <p>Using network and cloud flow logs, Tempo identifies common cyber threats, tagging sequences with MITRE ATT&CK techniques. Compact data representations, or embeddings, ensure faster analytics and reduced costs.</p>
-          
-          <p><a href="https://www.deeptempo.ai">Learn more about DeepTempo's innovative solutions</a> and follow them on <a href="https://www.linkedin.com/company/deeptempo">LinkedIn</a>, <a href="https://www.youtube.com/channel/deeptempo">YouTube</a>, and <a href="https://medium.com/@deeptempo">Medium</a>.</p>
-          
-          <p>For more details, visit the <a href="https://www.businesswire.com/news/home/20250225005555/en/DeepTempo-Enhances-Cybersecurity-with-Fine-Tuning-and-MITRE-Mapping">original press release</a>.</p>
-          
-          <p class="call-to-action">Strengthen your cybersecurity strategy today with DeepTempo’s advanced solutions. <a href="https://www.deeptempo.ai/contact">Contact us</a> for a demo!</p>
-      </article>
+        
+        <!-- Content placeholder - this is where your page-specific content would go -->
+        <div class="content">
+            <!-- Hero Section Example -->
+            <section class="hero">
+                <h1 class="hero-title">Cybersecurity Powered by Deep Learning</h1>
+                <h2 class="hero-subtitle">Advanced Threat Detection with AI-Driven Analytics</h2>
+            </section>
+            
+            <!-- Intro Section Example -->
+            <div class="intro-container">
+                <p>DeepTempo leverages deep learning to revolutionize cybersecurity, providing unparalleled threat detection capabilities that adapt to your organization's unique environment.</p>
+            </div>
+            
+            <!-- UEBA Comparison Section Example -->
+            <section class="section">
+                <div class="section-content">
+                    <h2>Why DeepTempo Outperforms Traditional UEBA</h2>
+                    <p>See how our deep learning approach compares to conventional User and Entity Behavior Analytics solutions</p>
+                    
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Traditional UEBA</th>
+                                <th>DeepTempo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Detection Method</td>
+                                <td>Rule-based analysis</td>
+                                <td>Deep learning neural networks</td>
+                            </tr>
+                            <tr>
+                                <td>False Positive Rate</td>
+                                <td>High</td>
+                                <td>Very Low</td>
+                            </tr>
+                            <tr>
+                                <td>Adaptation</td>
+                                <td>Manual tuning required</td>
+                                <td>Automatic continuous learning</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            
+            <!-- Model Criteria Section Example -->
+            <section class="model-criteria-section">
+                <div class="row">
+                    <div class="col-1-of-2">
+                        <h2>Our Model Criteria</h2>
+                        <p>DeepTempo's approach balances three critical factors to deliver superior results:</p>
+                        <ul>
+                            <li><span>Accuracy:</span> Precise detection with minimal false positives</li>
+                            <li><span>Speed:</span> Real-time analysis for immediate threat response</li>
+                            <li><span>Adaptability:</span> Continuous learning from your environment</li>
+                        </ul>
+                    </div>
+                    <div class="col-1-of-2">
+                        <svg class="triangle-svg" viewBox="0 0 340 260">
+                            <polygon points="170,20 40,240 310,240"></polygon>
+                            <text x="170" y="15" text-anchor="middle">Accuracy</text>
+                            <text x="30" y="250" text-anchor="middle">Speed</text>
+                            <text x="320" y="250" text-anchor="middle">Adaptability</text>
+                        </svg>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
         <footer class="footer">
             <div class="row">
                 <div class="col-1-of-2">
@@ -212,8 +567,6 @@
                         <a href="https://www.linkedin.com/groups/13114314/" target="_blank"><i class="fab fa-linkedin"></i></a>
                         <a href="https://www.reddit.com/r/DeepTempo/" target="_blank"><i class="fab fa-reddit"></i></a>
                         <a href="https://medium.com/deeptempo" target="_blank"><i class="fab fa-medium"></i></a>
-                        <!-- <a href="https://www.instagram.com/deep.tempo/" target="_blank"><i class="fab fa-instagram"></i></a> -->
-                        <!-- <a href="https://www.linkedin.com/company/deeptempo/" target="_blank"><i class="fab fa-facebook"></i></a> -->
                     </div>
                     <div class="footer__certifications">
                         <img src="img/native-app-accelerator-badge.png" alt="Native App Accelerator Badge" class="footer-cert-logo">
@@ -225,7 +578,7 @@
                         <img alt="Full logo" src="img/logo-full-color.png">
                     </picture>
                     <p class="footer__copyright">
-                        DeepTempo was built by a team of deep learning engineers and enterprise system builders, many of whom have spent years in security operations teams.  We believe in harnessing collective defense for cyber security via deep learning, to make the lives of security operations teams better while restoring the initiative to the defenders.
+                        DeepTempo was built by a team of deep learning engineers and enterprise system builders, many of whom have spent years in security operations teams. We believe in harnessing collective defense for cyber security via deep learning, to make the lives of security operations teams better while restoring the initiative to the defenders.
                     </p>
                 </div>
             </div>
@@ -244,8 +597,5 @@
                 navbarNav.classList.remove('active');
             });
         </script>
-        <!-- Start of HubSpot Embed Code -->
-        <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/48299015.js"></script>
-        <!-- End of HubSpot Embed Code -->
     </body>
 </html>
