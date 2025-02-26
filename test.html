@@ -11,6 +11,124 @@
 
         <link rel="stylesheet" href="css/style.css">
         <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+        <!-- Additional custom styles for this page -->
+        <style>
+            /* Ensure hero titles are centered */
+            .hero-title,
+            .hero-subtitle {
+            text-align: center;
+            }
+    
+            /* Introduction container with background overlay */
+            .intro-container {
+            text-align: center;
+            padding: 3rem 2rem;
+            margin: 2rem auto 4rem auto;
+            max-width: 900px;
+            border-radius: 8px;
+            background: linear-gradient(
+                rgba(255, 255, 255, 0.85),
+                rgba(255, 255, 255, 0.85)
+                ),
+                url('img/intro-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            }
+            .intro-container p {
+            font-size: 2.2rem;
+            line-height: 1.7;
+            }
+    
+            /* UEBA Comparison section: Centered heading and paragraph */
+            .section-content h2 {
+            text-align: center !important;
+            font-size: 4rem !important;
+            margin-bottom: 2rem !important;
+            }
+            .section-content p {
+            text-align: center !important;
+            font-size: 2.2rem !important;
+            margin-bottom: 3rem !important;
+            }
+    
+            /* Comparison table styling */
+            .comparison-table {
+            width: 90%;
+            margin: 0 auto 4rem auto;
+            border-collapse: collapse;
+            font-size: 2rem;
+            }
+            .comparison-table th,
+            .comparison-table td {
+            border: 1px solid #ddd;
+            padding: 1.5rem;
+            text-align: center;
+            }
+            .comparison-table th {
+            background: #ff2702;
+            color: #fff;
+            }
+    
+            /* MODEL CRITERIA SECTION: Two columns layout */
+            .model-criteria-section {
+            width: 90%;
+            max-width: 1000px;
+            margin: 4rem auto;
+            font-size: 2rem;
+            line-height: 1.8;
+            }
+            .model-criteria-section .row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            }
+            .model-criteria-section .col-1-of-2 {
+            width: 50%;
+            padding: 2rem;
+            }
+            /* Left Column: Text styling */
+            .model-criteria-section h2 {
+            text-align: left;
+            font-size: 4rem;
+            margin-bottom: 2rem;
+            }
+            .model-criteria-section p,
+            .model-criteria-section ul {
+            font-size: 2.2rem;
+            line-height: 1.8;
+            text-align: left;
+            }
+            .model-criteria-section ul {
+            list-style: disc inside;
+            margin-top: 1rem;
+            }
+            .model-criteria-section li span {
+            font-weight: 600;
+            color: #ff2702;
+            }
+            /* Right Column: Center the triangle diagram */
+            .model-criteria-section .col-1-of-2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            }
+            /* Triangle diagram styling – larger size, adjusted viewBox so text isn’t cut off */
+            .triangle-svg {
+            width: 300px;
+            height: 260px;
+            }
+            /* Use viewBox="0 0 340 260" with polygon points "170,20 40,240 310,240" for extra right margin */
+            .triangle-svg polygon {
+            fill: rgba(255, 230, 230, 0.7);
+            stroke: #ff2702;
+            stroke-width: 2;
+            }
+            .triangle-svg text {
+            fill: #ff2702;
+            font-weight: 600;
+            font-size: 1.8rem;
+            }
+        </style>
         
         <title>DeepTempo | Cybersecurity powered by Deep Learning</title>
     </head>
@@ -52,45 +170,86 @@
                 <div class="navbar__close" id="close-menu">&times;</div>
             </nav>
         </header>
-                            <section class="hero-section">
-                        <div class="hero-section-content">
-                            <h1 class="hero-title">DeepTempo Enhances Cybersecurity with Fine-Tuning and MITRE Mapping</h1>
-                            <p class="hero-subtitle">Deep learning-powered solution boosts threat detection accuracy and cuts response times, showcasing the strength of the Snowflake Native App Framework.</p>
-                            <p class="intro-text">Discover how DeepTempo's innovative cybersecurity solution integrates with existing systems to enhance protection and operational efficiency.</p>
-                        </div>
+                            <!-- Hero Section -->
+                    <section class="hero-section">
+                      <div class="hero-section-content">
+                        <h1 class="hero-title">DeepTempo Enhances Cybersecurity with Fine-Tuning and MITRE Mapping</h1>
+                        <p class="hero-subtitle">Deep learning-powered solution boosts threat detection accuracy and cuts response times, showcasing the strength of the Snowflake Native App Framework.</p>
+                      </div>
                     </section>
+
+                    <!-- Introduction Section -->
                     <section class="section-content">
-                        <div class="intro-container">
-                            <p style="font-size: 2.2rem; line-height: 1.7;">
-                                DeepTempo today announced exciting new capabilities for Tempo, its deep learning-powered cybersecurity solution on the Snowflake Marketplace. With advanced fine-tuning, MITRE mapping integration, and seamless compatibility with existing SIEM systems, Tempo offers enhanced context and actionable insights for security teams. 
-                            </p>
+                      <div class="intro-container">
+                        <p style="font-size: 2.2rem; line-height: 1.7;">
+                          DeepTempo introduces advanced capabilities for its cybersecurity solution, Tempo, enhancing threat detection accuracy and reducing response times. Leveraging the Snowflake Native App Framework, Tempo integrates seamlessly into existing SIEM systems, mapping detected anomalies to MITRE ATT&CK sequences, and providing actionable insights.
+                        </p>
+                      </div>
+                    </section>
+
+                    <!-- Main Content Section -->
+                    <section class="section-content">
+                      <h2>Enhancements in Cybersecurity with DeepTempo</h2>
+                      <p class="paragraph">
+                        Tempo's new fine-tuning capabilities allow organizations to customize models to their environment, ensuring precise threat detection. Operating upstream from a customer's SIEM, Tempo enriches data, flowing insights directly into current workflows. This integration, powered by Snowflake Cortex AI, offers improved protection efficiently and cost-effectively.
+                      </p>
+                      <table class="comparison-table">
+                        <tr>
+                          <th>Feature</th>
+                          <th>Benefit</th>
+                          <th>Integration</th>
+                        </tr>
+                        <tr>
+                          <td>Fine-tuning</td>
+                          <td>Greater accuracy</td>
+                          <td>Compatible with SIEM</td>
+                        </tr>
+                        <tr>
+                          <td>MITRE Mapping</td>
+                          <td>Actionable insights</td>
+                          <td>Seamless workflows</td>
+                        </tr>
+                      </table>
+                    </section>
+
+                    <!-- Two-column Section -->
+                    <section class="section-content two-column-section">
+                      <div class="row">
+                        <!-- Left Column: Text content -->
+                        <div class="col-1-of-2">
+                          <h2>Snowflake Native App Framework and Deep Learning</h2>
+                          <p class="paragraph">
+                            By integrating deep learning capabilities within Snowflake accounts, DeepTempo minimizes data movement and enhances time to value. Security teams can react swiftly with MITRE ATT&CK flagged alerts streaming into SIEM, reducing MTTR during active threats.
+                          </p>
+                          <ul>
+                            <li>
+                              <span>Reconnaissance:</span> Detects early-stage attacks
+                            </li>
+                            <li>
+                              <span>Data Exfiltration:</span> Identifies unauthorized data transfers
+                            </li>
+                          </ul>
                         </div>
-                        <div class="intro-container">
-                            <p class="paragraph">
-                                “This ensures that security teams can continue leveraging their SIEM while benefiting from the enhanced intelligence provided by DeepTempo,” said Evan Powell, founder and CEO, DeepTempo. Leveraging the Snowflake Native App Framework and Snowflake Cortex AI, DeepTempo delivers improved protection quickly and cost-effectively.
-                            </p>
-                            <p class="paragraph">
-                                Tempo's fine-tuning capabilities allow organizations to adapt models to their specific environments, ensuring greater accuracy in threat detection. Users benefit from enhanced protection and threat isolation, paying directly from their Snowflake account. Tempo operates within their environment, seamlessly flowing enriched data into existing workflows.
-                            </p>
-                            <p class="paragraph">
-                                Prasanna Krishnan, head of collaboration and horizon at Snowflake, notes, “DeepTempo's rapid progress in deploying advanced deep learning solutions is the innovation we envisioned with the Snowflake Native App Framework.” By bringing capabilities directly to customers' Snowflake accounts, data movement is minimized, and time to value is significantly reduced.
-                            </p>
-                            <p class="paragraph">
-                                Security teams with predefined response plans can now react with unprecedented speed using Tempo’s MITRE ATT&CK flagged alerts, which integrate seamlessly into SIEM platforms. This integration reduces mean time to respond (MTTR) and has proven to save critical time during active threats.
-                            </p>
-                            <p class="paragraph">
-                                Using only network and cloud flow logs, Tempo identifies common attacks such as reconnaissance, lateral movement, and data exfiltration. It automatically tags sequences with the closest MITRE ATT&CK techniques, embedding vital information in compact representations for efficient analytics and reduced log storage costs.
-                            </p>
-                            <p class="paragraph">
-                                DeepTempo provides deep-learning-based cybersecurity solutions that protect enterprises from cyber attacks, available on the Snowflake Native App Marketplace and for on-premise deployment. To learn more, visit <a href="https://www.deeptempo.ai">DeepTempo's website</a> or follow them on <a href="https://www.linkedin.com/company/deeptempo">LinkedIn</a>, <a href="https://www.youtube.com/channel/DeepTempo">YouTube</a>, and <a href="https://medium.com/@deeptempo">Medium</a>.
-                            </p>
-                            <p class="paragraph">
-                                <a href="https://www.businesswire.com/news/home/20250225005555/en/DeepTempo-Enhances-Cybersecurity-with-Fine-Tuning-and-MITRE-Mapping">Read the full article on Business Wire</a> for more details.
-                            </p>
-                            <p class="paragraph">
-                                <strong>Take Action:</strong> Enhance your cybersecurity infrastructure with DeepTempo's cutting-edge solutions. <a href="https://www.deeptempo.ai/contact">Contact us</a> today to learn more.
-                            </p>
+                        <!-- Right Column: Image or diagram -->
+                        <div class="col-1-of-2">
+                          <img src="path/to/image.jpg" alt="DeepTempo Cybersecurity Diagram" />
                         </div>
+                      </div>
+                    </section>
+
+                    <!-- About DeepTempo -->
+                    <section class="section-content">
+                      <h2>About DeepTempo</h2>
+                      <p class="paragraph">
+                        DeepTempo offers deep-learning-based solutions that safeguard enterprises against cyber threats. Available on the <a href="https://www.snowflake.com/data-marketplace/">Snowflake Marketplace</a> and for on-premise deployment, DeepTempo optimizes security spending and operational efficiency. Learn more at <a href="https://www.deeptempo.ai">DeepTempo's website</a> or explore their <a href="https://www.linkedin.com/company/deeptempo/">LinkedIn</a>, <a href="https://www.youtube.com/channel/DeepTempo">YouTube</a>, and <a href="https://medium.com/@deeptempo">Medium</a> channels.
+                      </p>
+                    </section>
+
+                    <!-- Call to Action -->
+                    <section class="section-content">
+                      <p class="paragraph">
+                        Discover how DeepTempo can revolutionize your cybersecurity strategies. <a href="https://www.deeptempo.ai/contact">Contact us</a> today to schedule a demo and enhance your organization's threat protection.
+                      </p>
                     </section>
         <footer class="footer">
             <div class="row">
