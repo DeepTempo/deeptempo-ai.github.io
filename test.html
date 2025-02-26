@@ -1,0 +1,1607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"2025 Cybersecurity Landscape: Opportunities and Challenges on the Horizon"</title>
+    <meta name="description" content="">
+    <meta name="author" content="DeepTempo">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        *,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+@media only screen and (max-width: 75em) {
+    html {
+        font-size: 56.25%;
+    }
+}
+
+@media only screen and (max-width: 56.25em) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media only screen and (min-width: 112.5em) {
+    html {
+        font-size: 75%;
+    }
+}
+
+body {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@media only screen and (max-width: 56.25em) {
+    body {
+        padding: 0;
+    }
+}
+
+::-moz-selection {
+    background-color: #ff2702;
+    color: #fff;
+}
+
+::selection {
+    background-color: #ff2702;
+    color: #fff;
+}
+
+body {
+    font-family: "Lexend", sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    color: #000;
+}
+
+.heading-primary {
+    color: #fff;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
+}
+
+.heading-primary--main {
+    display: block;
+    /* font-size: 9.5rem; */
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    -webkit-animation-name: moveInLeft;
+    animation-name: moveInLeft;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+}
+
+.heading-primary--main img {
+    width: 60rem;
+}
+
+.content-image {
+    width: 100%;
+}
+
+@media only screen and (max-width: 37.5em) {
+    .heading-primary--main {
+        letter-spacing: 0.1rem;
+        font-family: 5rem;
+    }
+}
+
+@media only screen and (max-width: 56.25em) {
+    .heading-primary--main img {
+        width: 48rem;
+    }
+}
+
+.heading-primary--sub {
+    display: block;
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+    -webkit-animation: moveInRight 1s ease-out;
+    animation: moveInRight 1s ease-out;
+}
+
+@media only screen and (max-width: 37.5em) {
+    .heading-primary--sub {
+        letter-spacing: .5rem;
+    }
+}
+
+.heading-secondary {
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    color: black;
+    letter-spacing: .2rem;
+    line-height: 7rem;
+}
+
+.highlighted {
+    font-size: 2.5rem;
+    font-weight: 200;
+    padding-bottom: 3rem;
+}
+
+.footer-nav {
+    display: block;
+}
+
+.footer-nav li {
+    list-style-type: none;
+    margin-bottom: 1rem;
+}
+
+.footer-nav li a {
+    color: color(srgb 0.9995 0.1576 0.0107);
+    text-decoration: none;
+}
+
+.footer-nav li a:hover {
+    color: orange;
+}
+
+@media only screen and (max-width: 56.25em) {
+    .heading-secondary {
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (max-width: 37.5em) {
+    .heading-secondary {
+        font-size: 2.5rem;
+        margin-top: 5rem;
+    }
+}
+
+.heading-tertiary {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-top: 2rem;
+}
+
+.paragraph {
+    font-size: 1.6rem;
+}
+
+.paragraph:not(:last-child) {
+    margin-bottom: 3rem;
+}
+
+.u-center-text {
+    text-align: center !important;
+}
+
+.u-margin-bottom-small {
+    margin-bottom: 1.5rem !important;
+}
+
+.u-margin-bottom-medium {
+    margin-bottom: 4rem !important;
+}
+
+@media only screen and (max-width: 56.25em) {
+    .u-margin-bottom-medium {
+        margin-bottom: 3rem !important;
+    }
+}
+
+.u-margin-bottom-big {
+    margin-bottom: 8rem !important;
+}
+
+@media only screen and (max-width: 56.25em) {
+    .u-margin-bottom-big {
+        margin-bottom: 5rem !important;
+    }
+}
+
+.u-margin-top-big {
+    margin-top: 8rem !important;
+}
+
+.u-margin-top-huge {
+    margin-top: 10rem !important;
+}
+
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: .15;
+    overflow: hidden;
+}
+
+.bg-video__content {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    position: relative;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+}
+
+.btn:hover::after {
+    -webkit-transform: scaleX(1.4) scaleY(1.6);
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn:active,
+.btn:focus {
+    outline: none;
+    -webkit-transform: translateY(-1px);
+    transform: translateY(-1px);
+}
+
+.btn--outline-white {
+    background: none;
+    color: white;
+    border: 3px solid white;
+}
+
+.btn--outline-red {
+    background: none;
+    color: color(srgb 0.9995 0.1576 0.0107);
+    border: 3px solid color(srgb 0.9995 0.1576 0.0107);
+}
+
+.btn--outline-yellow {
+    background: none;
+    color: yellow;
+    border: 3px solid yellow;
+}
+
+.btn--outline-blue {
+    background: none;
+    color: #296bc9;
+    border: 3px solid #296bc9;
+}
+
+.btn--white::after {
+    background-color: #fff;
+}
+
+.btn--green {
+    background-color: #55c57a;
+    color: #fff
+}
+
+.btn--green::after {
+    background-color: #55c57a;
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+}
+
+.btn--animated {
+    -webkit-animation: moveInBottom .5s ease-out .75s;
+    animation: moveInBottom .5s ease-out .75s;
+    -webkit-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+}
+
+.btn-text:link,
+.btn-text:visited {
+    font-size: 1.6rem;
+    color: #55c57a;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid #55c57a;
+    padding: 3px;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+}
+
+.btn-text:hover {
+    background-color: #55c57a;
+    color: #fff;
+    -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+}
+
+.btn-text:active {
+    -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.form__group:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+.form__input {
+    font-size: 1.5rem;
+    font-family: inherit;
+    color: inherit;
+    padding: 1.5rem 2rem;
+    border-radius: 2px;
+    background-color: rbga(#fff, 0.5);
+    border: none;
+    border-bottom: 3px solid transparent;
+    width: 90%;
+    display: block;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+@media only screen and (max-width: 56.25em) {
+    .form__input {
+        width: 100%;
+    }
+}
+
+.form__input:focus {
+    outline: none;
+    -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #55c57a;
+}
+
+.form__input:focus:invalid {
+    border-bottom: 3px solid #296bc9;
+}
+
+.form__input::-webkit-input-placeholder {
+    color: #999;
+}
+
+.form__label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-left: 2rem;
+    margin-top: .7rem;
+    display: block;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.form__input:placeholder-shown+.form__label {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateY(-4rem);
+    transform: translateY(-4rem);
+}
+
+.story {
+    width: 100%;
+    margin: 0 auto;
+    -webkit-box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 3px;
+    padding: 6rem;
+    font-size: 1.6rem;
+    min-height: 600px;
+}
+
+@media only screen and (max-width: 56.25em) {
+    .story {
+        width: 100%;
+        padding: 4rem;
+        min-height: fit-content;
+    }
+}
+
+.story__shape {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.story__img {
+    height: 100%;
+}
+
+.story__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+    opacity: 0;
+    backface-visibility: hidden;
+}
+
+.footer {
+    background-color: #0e0e0d;
+    padding: 10rem 0;
+    font-size: 1.4rem;
+    color: #f7f7f7;
+}
+
+@media only screen and (max-width: 56.25em) {
+    .footer {
+        padding: 8rem 0
+    }
+}
+
+.footer__logo-box {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+    .footer__logo-box {
+        margin-bottom: 6rem;
+    }
+}
+
+.footer__logo img {
+    width: 30rem;
+    height: auto;
+}
+
+.footer__navigation {
+    border-top: 1px solid #777;
+    padding-top: 2rem;
+    display: inline-block;
+}
+
+@media only screen and (max-width: 56.25em) {
+    .footer__navigation {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.footer__list {
+    list-style: none;
+}
+
+.footer__item {
+    display: inline-block;
+}
+
+.footer__item:not(:last-child) {
+    margin-right: 1.5rem;
+}
+
+.footer__link:link,
+.footer__link:visited {
+    color: #f7f7f7;
+    background-color: #333;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+}
+
+.footer__link:hover,
+.footer__link:active {
+    color: #55c57a;
+    -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+    -webkit-transform: rotate(5deg) scale(1.3);
+    transform: rotate(5deg) scale(1.3);
+}
+
+.footer__copyright {
+    float: right;
+    margin-top: 2rem;
+}
+
+.footer__social-media {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer__social-media a {
+    color: #f7f7f7;
+    font-size: 2rem;
+    transition: color 0.3s;
+}
+
+.footer__social-media a:hover {
+    color: #ff2702;
+}
+
+@media only screen and (max-width: 56.25em) {
+    .footer__copyright {
+        width: 100%;
+        float: none;
+    }
+}
+
+.row {
+    max-width: 114rem;
+    margin: 0 auto;
+}
+
+.row:not(:last-child) {
+    margin-bottom: 8rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+    .row:not(:last-child) {
+        margin-bottom: 6rem;
+    }
+}
+
+@media only screen and (max-width: 56.25em) {
+    .row {
+        max-width: 50rem;
+        padding: 0 3rem;
+    }
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.row [class^="col-"] {
+    float: left;
+}
+
+.row [class^="col-"]:not(:last-child) {
+    margin-right: 6rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+    .row [class^="col-"]:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 6rem;
+    }
+}
+
+@media only screen and (max-width: 56.25em) {
+    .row [class^="col-"] {
+        width: 100% !important;
+    }
+}
+
+.row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2);
+}
+
+.row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3);
+}
+
+.row .col-2-of-3 {
+    width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem);
+}
+
+.row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4);
+}
+
+.row .col-2-of-4 {
+    width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem);
+}
+
+.row .col-3-of-4 {
+    width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem);
+}
+
+.header {
+    height: 85vh;
+    background-image: linear-gradient(to bottom right, rgba(98, 98, 98, 0.93), rgba(0, 0, 0, 0.95)), url(../img/hero-4.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+}
+
+@supports (-webkit-clip-path: polygon(0 0)) or (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+    .header {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+        height: 95vh;
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+only screen and (min-width: 125em) {
+    .header {
+        background-image: linear-gradient(to bottom right, rgba(98, 98, 98, 0.93), rgba(0, 0, 0, 0.95)), url(../img/hero-4.jpg);
+    }
+}
+
+@media only screen and (max-width: 37.5em) {
+    .header {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    }
+}
+
+.header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+}
+
+.header__logo {
+    height: 3.5rem;
+}
+
+.header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.section-about {
+    background-color: #f7f7f7;
+    padding: 25rem 0;
+    margin-top: -20vh;
+}
+
+@media only screen and (max-width: 56.25em) {
+    .section-about {
+        padding: 20rem 0;
+    }
+}
+
+.section-features {
+    padding: 20rem 0;
+    background: rgba(176, 30, 4, 1);
+    background-size: cover;
+    -webkit-transform: skewY(-7deg);
+    transform: skewY(-7deg);
+    margin-top: -10rem;
+}
+
+.section-features, .section-features .heading-secondary {
+    color: white;
+}
+
+.section-features>* {
+    -webkit-transform: skewY(7deg);
+    transform: skewY(7deg);
+}
+
+@media only screen and (max-width: 56.25em) {
+    .section-features {
+        padding: 10rem 0;
+    }
+}
+
+.section-tours {
+    background-color: #f7f7f7;
+    padding: 25rem 0 15rem 0;
+    margin-top: -10rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+    .section-tours {
+        padding: 20rem 0 10rem 0;
+    }
+}
+
+.section-stories {
+    position: relative;
+    padding: 15rem 0;
+    background-color: white;
+}
+
+@media only screen and (max-width: 56.25em) {
+    .section-stories {
+        padding: 10rem 0;
+    }
+}
+
+.section-book {
+    padding: 15rem 0;
+    background: #e6e6e6;
+}
+
+@media only screen and (max-width: 56.25em) {
+    .section-book {
+        padding: 10rem 0;
+    }
+}
+
+.book {
+    background-image: linear-gradient(105deg, rgba(176, 30, 4, 0.95) 0%, rgba(176, 30, 4, 0.95) 50%, transparent 50%), url(../img/cybersecurity-3.jpg);
+    background-size: cover;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+}
+
+.book .heading-secondary {
+    color: white;
+}
+
+.book__form {
+    width: 50%;
+    padding: 6rem;
+}
+
+@media only screen and (max-width: 75em) {
+    .book__form {
+        width: 65%;
+    }
+}
+
+@media only screen and (max-width: 56.25em) {
+    .book__form {
+        width: 100%;
+    }
+}
+
+/* Main Navigation Styles */
+.navbar {
+    position: sticky;
+    top: 0;
+    height: 90px;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3rem;
+    z-index: 1000;
+}
+
+.navbar__logo img {
+    height: 50px;
+}
+
+.navbar__toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    right: 3rem;
+}
+
+.navbar__toggle .bar {
+    background-color: #fff;
+    height: 3px;
+    width: 25px;
+    margin: 4px 0;
+    transition: all 0.3s;
+}
+
+.navbar__nav {
+    display: flex;
+    align-items: center;
+}
+
+.navbar__list {
+    list-style: none;
+    display: flex;
+}
+
+.navbar__item {
+    margin: 0 2rem;
+}
+
+.navbar__link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.navbar__link:hover, .navbar__link.active {
+    color: #ff2702;
+}
+
+/* Responsive Navigation */
+@media only screen and (max-width: 56.25em) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 2rem;
+    }
+
+    .navbar__toggle {
+        display: flex;
+    }
+
+    .navbar__nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 1001;
+        transition: all 0.3s;
+    }
+
+    .navbar__nav.active {
+        display: flex;
+    }
+
+    .navbar__list {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar__item {
+        margin: 3rem 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar__link {
+        font-size: 3rem;
+        font-weight: 700;
+        display: block;
+        width: 100%;
+    }
+
+    .navbar__close {
+        position: absolute;
+        top: 1rem;
+        right: 4rem;
+        font-size: 5rem;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .navbar__logo img {
+        height: 30px;
+    }
+}
+
+/* About Us Page */
+
+.hero-section {
+    background: linear-gradient(to bottom right, rgba(98, 98, 98, 0.93), rgba(0, 0, 0, 0.95)), url(../img/hero-6.jpg);
+    position: relative;
+    color: #fff;
+    text-align: center;
+    padding: 10rem 2rem;
+}
+
+/* .hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+} */
+
+.hero-section-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.hero-subtitle {
+    font-size: 2.5rem;
+    font-weight: 300;
+    padding: 0 3em;
+}
+
+.company-intro {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5rem auto;
+    max-width: 1200px;
+    padding: 4rem;
+}
+
+.company-intro-left, .company-intro-right {
+    flex: 1;
+    padding: 2rem;
+}
+
+.company-intro-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-image {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+}
+
+.text-block {
+    font-size: 1.8rem;
+    line-height: 1.6;
+}
+
+.text-block strong {
+    font-weight: 700;
+}
+
+.highlight {
+    color: #ff2702;
+    font-weight: 700;
+}
+
+.quote-section {
+    text-align: center;
+    background: #ff2603;
+    padding: 4rem 2rem;
+    margin: 5rem 0;
+    font-size: 2rem;
+    font-style: italic;
+    color: white;
+}
+
+.team-section h2, .advisors-section h2 {
+    margin-top: 8rem;
+}
+
+.team-section {
+    max-width: 1200px;
+    margin: 5rem auto;
+    padding: 0 2rem;
+}
+
+.team-section h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.team-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.team-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    /* text-align: center; */
+    max-width: 240px;
+}
+
+.team-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    filter: grayscale(100%);
+    transition: filter 0.8s ease-in-out;
+}
+
+.team-card img:hover {
+    filter: grayscale(0%);
+}
+
+.team-card h3 {
+    font-size: 2rem;
+    margin-bottom: 0.3rem;
+    padding: 0 0.6rem 0 0.6rem;
+}
+
+.team-card p {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    padding: 0 0.6rem 0 0.6rem;
+}
+
+.linkedin-icon {
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+
+.linkedin-icon i {
+    margin-top: 1rem;
+    margin-right: 1rem;
+    font-size: 2rem;
+    color: #0077b5;
+}
+
+.advisors-section {
+    max-width: 1200px;
+    margin: 5rem auto;
+    padding: 0 2rem;
+}
+
+.advisors-section h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.advisors-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    justify-items: center;
+}
+
+.advisor-card {
+    width: 240px;
+    /* text-align: center; */
+}
+
+.advisor-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    filter: grayscale(100%);
+    transition: filter 0.6s ease-in-out;
+}
+
+.advisor-card img:hover {
+    filter: grayscale(0%);
+}
+
+.advisor-card h3 {
+    font-size: 1.8rem;
+    margin: 1rem 0 0 0;
+    padding: 0 0.6rem 0 0.6rem;
+}
+
+.advisor-card p {
+    font-size: 1.5rem;
+    padding: 0 0.6rem 0 0.6rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .team-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .advisors-cards {
+        grid-template-columns: 1fr;
+    }
+    .company-intro-right {
+        display: none;
+    }
+    .team-card {
+        max-width: 70%;
+    }
+    .team-card img {
+        height: 320px;
+    }
+    .advisor-card {
+        width: 70%;
+    }
+    .advisor-card img {
+        height: 320px;
+    }
+}
+
+/* Product Page */
+
+.features-section {
+    max-width: 1200px;
+    margin: 5rem auto;
+    padding: 4rem;
+}
+
+.features-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.features-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 3rem;
+    text-align: center;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.pipeline-step:not(:last-child) {
+    position: relative; /* Enable absolute positioning for the pseudo-element */
+}
+
+/* Pseudo-element for the arrow */
+.pipeline-step:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 50%;           /* Center vertically relative to the card */
+    right: -30px;       /* Adjust so the arrow appears between this card and the next */
+    transform: translateY(-50%);
+    width: 24px;        /* Adjust width as needed */
+    height: 24px;       /* Adjust height as needed */
+    background: url('img/right-arrow.png') no-repeat center center;
+    background-size: contain;
+    z-index: -1;        /* Place behind the card */
+}
+
+
+.feature-icon {
+    font-size: 3rem;
+    color: #ff2702;
+    margin-bottom: 1rem;
+}
+
+.feature-card:hover {
+    /* transform: translateY(-10px); */
+    /* background-color: #f7f7f7; */
+}
+
+.feature-title {
+    font-size: 2em;
+}
+
+.feature-description {
+    font-size: 1.5em;
+}
+
+.cta-section {
+    text-align: center;
+    margin: 5rem 0;
+}
+
+.cta-button {
+    background-color: #ff2702;
+    color: #fff;
+    padding: 1.5rem 4rem;
+    font-size: 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    background-color: #bf3a3a;
+}
+
+/* Responsive Design Adjustments */
+@media only screen and (max-width: 768px) {
+    .features-row {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-card {
+        padding: 2rem;
+    }
+
+    .cta-button {
+        padding: 1.2rem 3rem;
+        font-size: 1.6rem;
+    }
+}
+
+/* Contact Us Page */
+
+.hero-section {
+    background: linear-gradient(to bottom right, rgba(98, 98, 98, 0.93), rgba(0, 0, 0, 0.95)), url(../img/hero-5.jpg);
+    position: relative;
+    color: #fff;
+    text-align: center;
+    padding: 10rem 2rem;
+}
+
+/* .hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+} */
+
+.hero-section-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.hero-subtitle {
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+
+.contact-info-form-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 5rem auto;
+    padding: 4rem;
+}
+
+.contact-info {
+    flex: 1;
+    background: #f7f7f7;
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-info p {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info p i {
+    margin-right: 1rem;
+    color: #ff2702;
+}
+
+.contact-form {
+    flex: 1;
+    background: #fff;
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1.6rem;
+}
+
+select {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1.6rem;
+    background-color: #fff;
+    color: #333;
+    appearance: none; /* Removes default dropdown arrow styling */
+    -webkit-appearance: none; /* Removes default dropdown arrow styling for Safari */
+    -moz-appearance: none; /* Removes default dropdown arrow styling for Firefox */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'24\' height=\'24\' viewBox=\'0 0 12 12\'%3E%3Cpath fill=\'%23333\' d=\'M4 6l4 4 4-4z\'/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1rem;
+}
+
+select:focus, input:focus, textarea:focus {
+    outline: none;
+    border-color: #ffbcb0; /* Matches the focus color of the textboxes */
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+}
+
+
+textarea {
+    resize: vertical;
+}
+
+.submit-button {
+    background-color: #ff2702;
+    color: #fff;
+    padding: 1.2rem 3rem;
+    font-size: 1.6rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #bf3a3a;
+}
+
+.map-section {
+    text-align: center;
+    margin: 5rem auto;
+    max-width: 1200px;
+    padding: 0 2rem;
+}
+
+.map-section h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.map-container {
+    width: 100%;
+    height: 400px;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+    .contact-info-form-section {
+        flex-direction: column;
+    }
+}
+
+/* JOB LISTING */
+
+.job-listing-section {
+    max-width: 1200px;
+    margin: 5rem auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.job-listing-section h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.job-listing-intro {
+    font-size: 1.8rem;
+    margin-bottom: 4rem;
+    color: #555;
+}
+
+.job-listing-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+}
+
+.job-listing-item {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 3rem;
+    text-align: left;
+    width: 100%;
+    max-width: 800px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.job-listing-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.job-listing-item h3 {
+    font-size: 2.4rem;
+    margin-bottom: 1.5rem;
+    color: #ff2702;
+}
+
+.job-listing-item p {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.job-apply-link {
+    font-size: 1.6rem;
+    color: #877875;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.job-apply-link:hover {
+    text-decoration: underline;
+    color: #ff2702;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    .job-listing-container {
+        gap: 2rem;
+    }
+
+    .job-listing-item {
+        padding: 2rem;
+    }
+}
+
+
+/* News */
+
+.news-section {
+    max-width: 1200px;
+    margin: 5rem auto;
+    padding: 0 2rem;
+}
+
+.news-section h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.news-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.news-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    max-width: 500px;
+    width: 100%;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.news-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.news-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ed4f4f;
+    margin-bottom: 1rem;
+}
+
+.news-source {
+    font-size: 1.4rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.news-date {
+    font-size: 1.2rem;
+    color: #888;
+    margin-bottom: 0.5rem;
+}
+
+.footer__certifications {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: left;
+    gap: 2rem;
+}
+
+.footer-cert-logo {
+    height: 80px;
+    width: auto;
+}
+
+.divider {
+    border-top: 1px solid rgba(111, 111, 111, 0.4);
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 10rem;
+    padding-bottom: 2rem;
+}
+    </style>
+</head>
+<body>
+    <h1>"2025 Cybersecurity Landscape: Opportunities and Challenges on the Horizon"</h1>
+    
+    <div class="content">
+                            <section class="hero-section">
+                        <div class="hero-section-content">
+                            <h1 class="hero-title">Catch Up and Record: Insights on Cybersecurity and AI in 2025</h1>
+                            <p class="hero-subtitle">Explore the future of cybersecurity, AI, and deep learning with insights from industry experts Evan Powell and JT.</p>
+                            <p class="intro-text">
+                                In a recent conversation, cybersecurity veterans Evan Powell and JT discussed the evolving landscape of technology and the opportunities and challenges it presents. From the role of AI and machine learning to the ever-present threat of burnout in the cybersecurity industry, this dialogue offers a comprehensive look into what's next in tech.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="content-section">
+                        <img src="images/cybersecurity-conversation.jpg" alt="Cybersecurity and AI discussion" class="content-image">
+                        <h2>The Promise of AI and Machine Learning</h2>
+                        <p>As we approach 2025, the potential for AI and machine learning to transform industries is vast. JT highlights the optimistic and active time in tech, with AI and deep learning offering significant opportunities for innovation. The ability to automate and elevate work is seen as a crucial advancement, particularly in handling tasks that range from simple analytics to complex problem-solving.</p>
+                        <h2>Burnout in Cybersecurity: An Ongoing Challenge</h2>
+                        <p>Evan Powell raises concerns about burnout in the cybersecurity field, an industry known for its high-pressure environment. JT shares insights from his extensive experience in incident response, emphasizing the importance of building sustainable teams and leveraging automation to reduce workload.</p>
+                        <h2>Deep Tempo's Role in Cybersecurity</h2>
+                        <p>The conversation also touched on Deep Tempo’s contributions to cybersecurity. Evan and JT discussed the importance of reducing false positive rates in security solutions and how deep learning models can enhance detection accuracy. JT emphasizes the need for tools that not only perform well but also integrate seamlessly into existing security frameworks.</p>
+                        <h2>A Call for Innovation and Collaboration</h2>
+                        <p>As cybersecurity threats become more sophisticated, the need for collaborative innovation is paramount. The dialogue concludes with a call to action for the industry to continue developing solutions that are both technologically advanced and human-centered.</p>
+                        <p>For more insights into the future of cybersecurity, explore our <a href="/blog">blog</a> or connect with us through our <a href="https://www.linkedin.com">LinkedIn</a> page.</p>
+                        <p>Stay informed and secure by signing up for our <a href="/newsletter">newsletter</a> today!</p>
+                    </section>
+    </div>
+    
+    
+</body>
+</html>
