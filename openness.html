@@ -12,30 +12,19 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <title>DeepTempo | Open Approaches & NVIDIA Pipeline</title>
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9EGVJW1TZT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-9EGVJW1TZT');
+  </script>
 </head>
 <body>
-  <header class="navbar">
-    <div class="navbar__logo">
-      <img src="img/logo-full-color.png" alt="DeepTempo Logo">
-    </div>
-    <div class="navbar__toggle" id="mobile-menu">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </div>
-    <nav class="navbar__nav" id="navbar-overlay">
-      <ul class="navbar__list">
-        <li class="navbar__item"><a href="index.html" class="navbar__link">Home</a></li>
-        <li class="navbar__item"><a href="product.html" class="navbar__link">Product</a></li>
-        <li class="navbar__item"><a href="LogLM_ML.html" class="navbar__link">vs ML/UEBA</a></li>
-        <li class="navbar__item"><a href="https://medium.com/deeptempo" target="_blank" class="navbar__link">Blog</a></li>
-        <li class="navbar__item"><a href="http://docs.deeptempo.ai/" target="_blank" class="navbar__link">Documentation</a></li>
-        <li class="navbar__item"><a href="about-us.html" class="navbar__link">About Us</a></li>
-        <li class="navbar__item"><a href="contact-us.html" class="navbar__link">Contact Us</a></li>
-      </ul>
-      <div class="navbar__close" id="close-menu">&times;</div>
-    </nav>
-  </header>
+  <!-- Header will be inserted here by JavaScript -->
 
   <!-- DeepMitre Section -->
   <section class="hero-section">
@@ -65,7 +54,7 @@
         <h2 class="heading-secondary">Limitations</h2>
       </div>
       <p class="paragraph">
-        Each user can perform only a handful of comparisons today. Please get in touch if you'd like to run Tempo yourself or try it out on Snowflake—where it’s available as a NativeApp with a free tier.
+        Each user can perform only a handful of comparisons today. Please get in touch if you'd like to run Tempo yourself or try it out on Snowflake—where it's available as a NativeApp with a free tier.
       </p>
       <div class="u-center-text" style="margin-top: 2rem;">
         <a href="https://app.snowflake.com/marketplace/listing/GZTYZOYXHP3/deeptempo-cybersecurity-tempo?search=deep%20tempo" target="_blank" class="cta-button">Try Now on Snowflake</a>
@@ -126,50 +115,12 @@
     </div>
   </section>
 
-  <footer class="footer">
-    <div class="row">
-      <div class="col-1-of-2">
-        <ul class="footer-nav">
-          <li>&copy; DeepTempo.ai - 2024. All rights reserved.</li>
-          <li><a href="docs/DeepTempo - Privacy Policy for Snowflake NativeApp.pdf">Privacy</a></li>
-          <li><a href="docs/Getting Started with TEMPO.pdf">Documentation</a></li>
-        </ul>
-        <div class="footer__social-media">
-          <a href="https://www.youtube.com/@DeepTempo-ai" target="_blank"><i class="fab fa-youtube"></i></a>
-          <a href="https://www.linkedin.com/groups/13114314/" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="https://www.reddit.com/r/DeepTempo/" target="_blank"><i class="fab fa-reddit"></i></a>
-          <a href="https://medium.com/deeptempo" target="_blank"><i class="fab fa-medium"></i></a>
-        </div>
-        <div class="footer__certifications">
-          <img src="img/native-app-accelerator-badge.png" alt="Native App Accelerator Badge" class="footer-cert-logo">
-          <img src="img/nvidia-inception-program-badge.png" alt="Nvidia Inception Program Badge" class="footer-cert-logo">
-          <img src="img/BNY_Ascent.png" alt="BNY_Ascent Badge" class="footer-cert-logo">
-        </div>
-      </div>
-      <div class="col-1-of-2">
-        <picture class="footer__logo">
-          <img alt="Full logo" src="img/logo-full-color.png">
-        </picture>
-        <p class="footer__copyright">
-          DeepTempo was built by a team of deep learning engineers and enterprise system builders, many of whom have spent years in security operations teams. We harness collective defense for cybersecurity via deep learning, empowering defenders.
-        </p>
-      </div>
-    </div>
-  </footer>
+  <!-- Footer will be inserted here by JavaScript -->
 
-  <script>
-    const mobileMenu = document.getElementById('mobile-menu');
-    const navbarNav = document.getElementById('navbar-overlay');
-    const closeMenu = document.getElementById('close-menu');
-
-    mobileMenu.addEventListener('click', () => {
-      navbarNav.classList.add('active');
-    });
-
-    closeMenu.addEventListener('click', () => {
-      navbarNav.classList.remove('active');
-    });
-  </script>
+  <!-- Include the header and footer components -->
+  <script src="js/header-component.js"></script>
+  <script src="js/footer-component.js"></script>
+  
   <!-- HubSpot Embed Code -->
   <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/48299015.js"></script>
 </body>

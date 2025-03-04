@@ -27,7 +27,7 @@ class MediumFetcher {
         // Extract first image from content or use default
         const imgRegex = /<img[^>]+src="([^">]+)"/;
         const imgMatch = item.content.match(imgRegex);
-        const image = imgMatch ? imgMatch[1] : 'img/genericArticle.jpg';
+        const image = imgMatch ? imgMatch[1] : 'img/genaricArticle.jpg';
         
         return {
           title: item.title,

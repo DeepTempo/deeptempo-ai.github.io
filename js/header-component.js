@@ -22,7 +22,8 @@ document.addEventListener('DOMContentLoaded', function() {
               <li><a href="openness.html" class="dropdown-item">Openness</a></li>
             </ul>
           </li>
-          <li class="navbar__item"><a href="https://medium.com/deeptempo" target="_blank" class="navbar__link">Blog</a></li>
+          <li class="navbar__item"><a href="news.html" class="navbar__link" id="nav-news">News</a></li>
+          <li class="navbar__item"><a href="events.html" class="navbar__link" id="nav-events">Events</a></li>
           <li class="navbar__item"><a href="http://docs.deeptempo.ai/" target="_blank" class="navbar__link">Documentation</a></li>
           <li class="navbar__item"><a href="about-us.html" class="navbar__link" id="nav-about">About Us</a></li>
           <li class="navbar__item"><a href="contact-us.html" class="navbar__link" id="nav-contact">Contact Us</a></li>
@@ -115,6 +116,8 @@ document.addEventListener('DOMContentLoaded', function() {
     'index.html': 'nav-home',
     'product.html': 'nav-product',
     'LogLM_ML.html': 'nav-loglm',
+    'news.html': 'nav-news',
+    'events.html': 'nav-events',
     'about-us.html': 'nav-about',
     'contact-us.html': 'nav-contact'
   };
@@ -124,7 +127,8 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById(pageToNavId[currentPage]).classList.add('active');
     
     // If it's a dropdown item, also highlight the parent
-    if (currentPage === 'LogLM_ML.html' || currentPage === 'product.html') {
+    if (currentPage === 'LogLM_ML.html' || currentPage === 'product.html' || 
+        currentPage === 'snowflake.html' || currentPage === 'openness.html') {
       document.getElementById('nav-product').classList.add('active');
     }
   }
