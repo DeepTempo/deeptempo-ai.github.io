@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+        
+        <!-- Add Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        
+        <title>DeepTempo | Events</title>
+
+        <style>
+            .events-container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 2rem;
+            }
+            
+            .events-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+                gap: 2rem;
+                margin-top: 3rem;
+            }
+            
+            .event-card {
+                background-color: rgba(255, 255, 255, 0.05);
+                border-radius: 8px;
+                overflow: hidden;
+                transition: transform 0.3s, box-shadow 0.3s;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                border: 1px solid #eee;
+            }
+            
+            .event-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            }
+            
+            .event-image-container {
+                width: 100%;
+                height: 200px;
+                overflow: hidden;
+                background-color: #b3afaf;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 20px;
+            }
+            
+            .event-image {
+                width: auto;
+                height: auto;
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+                transition: transform 0.3s;
+            }
+            
+            .event-card:hover .event-image {
+                transform: scale(1.05);
+            }
+            
+            .event-content {
+                padding: 2rem;
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .event-title {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+                color: #000000;
+                font-weight: 600;
+            }
+            
+            .event-date {
+                font-size: 1.4rem;
+                color: #ff2702;
+                margin-bottom: 1rem;
+                font-weight: 500;
+            }
+            
+            .event-location {
+                font-size: 1.4rem;
+                color: #555;
+                margin-bottom: 1.5rem;
+                display: flex;
+                align-items: center;
+            }
+            
+            .event-location i {
+                margin-right: 0.5rem;
+            }
+            
+            .event-description {
+                font-size: 1.5rem;
+                line-height: 1.6;
+                color: #333;
+                margin-bottom: 2rem;
+                flex-grow: 1;
+            }
+            
+            .event-link {
+                align-self: flex-start;
+                background-color: #ff2702;
+                color: white;
+                padding: 1rem 2rem;
+                border-radius: 4px;
+                text-decoration: none;
+                font-size: 1.4rem;
+                transition: background-color 0.3s;
+                margin-top: auto;
+            }
+            
+            .event-link:hover {
+                background-color: #d62200;
+            }
+            
+            .past-events-section {
+                margin-top: 5rem;
+                padding-top: 3rem;
+                border-top: 1px solid #eee;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+                margin-bottom: 2rem;
+                text-align: center;
+            }
+            
+            .no-events-message {
+                text-align: center;
+                font-size: 1.8rem;
+                color: #777;
+                padding: 3rem;
+                grid-column: 1 / -1;
+            }
+            
+            @media (max-width: 768px) {
+                .events-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+    </head>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9EGVJW1TZT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-9EGVJW1TZT');
+    </script>
+
+    <!-- Start of HubSpot Embed Code -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/48299015.js"></script>
+    <!-- End of HubSpot Embed Code -->
+    
+    <body>
+        <!-- Header will be inserted here by JavaScript -->
+
+        <section class="hero-section">
+            <div class="hero-section-content">
+                <h1 class="hero-title">DeepTempo Events</h1>
+                <p class="hero-subtitle">Join us at upcoming conferences, webinars, and meetups</p>
+            </div>
+        </section>
+
+        <section class="events-container">
+            <h2 class="section-title">Upcoming Events</h2>
+            <div class="events-grid" id="upcoming-events-grid">
+                <!-- Upcoming events will be loaded here dynamically -->
+            </div>
+
+            <div class="past-events-section">
+                <h2 class="section-title">Past Events</h2>
+                <div class="events-grid" id="past-events-grid">
+                    <!-- Past events will be loaded here dynamically -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer will be inserted here by JavaScript -->
+
+        <!-- Include the header and footer components -->
+        <script src="js/header-component.js"></script>
+        <script src="js/footer-component.js"></script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Function to format date range
+                function formatDateRange(startDate, endDate) {
+                    const start = new Date(startDate);
+                    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                    
+                    if (endDate) {
+                        const end = new Date(endDate);
+                        if (start.getMonth() === end.getMonth() && start.getFullYear() === end.getFullYear()) {
+                            // Same month and year
+                            return `${start.toLocaleDateString('en-US', { month: 'long', day: 'numeric' })} - ${end.getDate()}, ${end.getFullYear()}`;
+                        } else {
+                            // Different months or years
+                            return `${start.toLocaleDateString('en-US', options)} - ${end.toLocaleDateString('en-US', options)}`;
+                        }
+                    } else {
+                        // Single day event
+                        return start.toLocaleDateString('en-US', options);
+                    }
+                }
+
+                // Function to display events
+                function displayEvents(eventsData) {
+                    const upcomingEventsGrid = document.getElementById('upcoming-events-grid');
+                    const pastEventsGrid = document.getElementById('past-events-grid');
+                    
+                    const currentDate = new Date();
+                    let upcomingEvents = [];
+                    let pastEvents = [];
+                    
+                    // Sort events into upcoming and past
+                    eventsData.forEach(event => {
+                        const eventDate = new Date(event.date);
+                        if (event.past || eventDate < currentDate) {
+                            pastEvents.push(event);
+                        } else {
+                            upcomingEvents.push(event);
+                        }
+                    });
+                    
+                    // Sort upcoming events by date (soonest first)
+                    upcomingEvents.sort((a, b) => new Date(a.date) - new Date(b.date));
+                    
+                    // Sort past events by date (most recent first)
+                    pastEvents.sort((a, b) => new Date(b.date) - new Date(a.date));
+                    
+                    // Display upcoming events
+                    if (upcomingEvents.length > 0) {
+                        upcomingEventsGrid.innerHTML = '';
+                        upcomingEvents.forEach(event => {
+                            const formattedDate = formatDateRange(event.date, event.endDate);
+                            // Use logoUrl if available, otherwise fall back to image
+                            const imageUrl = event.logoUrl || event.image;
+                            
+                            const eventHTML = `
+                                <div class="event-card">
+                                    <div class="event-image-container">
+                                        <img src="${imageUrl}" alt="${event.title}" class="event-image" onerror="this.src='img/genaricArticle.jpg';">
+                                    </div>
+                                    <div class="event-content">
+                                        <h3 class="event-title">${event.title}</h3>
+                                        <p class="event-date">${formattedDate}</p>
+                                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> ${event.location}</p>
+                                        <p class="event-description">${event.description}</p>
+                                        <a href="${event.url}" target="_blank" class="event-link">Learn More</a>
+                                    </div>
+                                </div>
+                            `;
+                            
+                            upcomingEventsGrid.innerHTML += eventHTML;
+                        });
+                    } else {
+                        upcomingEventsGrid.innerHTML = '<div class="no-events-message">No upcoming events at this time. Check back soon!</div>';
+                    }
+                    
+                    // Display past events
+                    if (pastEvents.length > 0) {
+                        pastEventsGrid.innerHTML = '';
+                        pastEvents.forEach(event => {
+                            const formattedDate = formatDateRange(event.date, event.endDate);
+                            // Use logoUrl if available, otherwise fall back to image
+                            const imageUrl = event.logoUrl || event.image;
+                            
+                            const eventHTML = `
+                                <div class="event-card">
+                                    <div class="event-image-container">
+                                        <img src="${imageUrl}" alt="${event.title}" class="event-image" onerror="this.src='img/genaricArticle.jpg';">
+                                    </div>
+                                    <div class="event-content">
+                                        <h3 class="event-title">${event.title}</h3>
+                                        <p class="event-date">${formattedDate}</p>
+                                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> ${event.location}</p>
+                                        <p class="event-description">${event.description}</p>
+                                ${event.url !== '#' ? `<a href="${event.url}" target="_blank" class="event-link">Event Details</a>` : ''}
+                                    </div>
+                                </div>
+                            `;
+                            
+                            pastEventsGrid.innerHTML += eventHTML;
+                        });
+                    } else {
+                        pastEventsGrid.innerHTML = '<div class="no-events-message">No past events to display.</div>';
+                    }
+                }
+                
+                // Fetch events data from JSON file
+                fetch('data/events-data.json')
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        displayEvents(data);
+                    })
+                    .catch(error => {
+                        console.error('Error fetching events data:', error);
+                        document.getElementById('upcoming-events-grid').innerHTML = 
+                            '<div class="no-events-message">Error loading events. Please try again later.</div>';
+                        document.getElementById('past-events-grid').innerHTML = '';
+                    });
+            });
+        </script>
+    </body>
+</html> 

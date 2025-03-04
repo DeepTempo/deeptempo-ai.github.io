@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+        
+        <!-- Add Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        
+        <title>DeepTempo | News</title>
+
+        <style>
+            .news-container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 2rem;
+            }
+            
+            .news-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+                gap: 2rem;
+                margin-top: 3rem;
+            }
+            
+            .news-card {
+                background-color: rgba(255, 255, 255, 0.05);
+                border-radius: 8px;
+                overflow: hidden;
+                transition: transform 0.3s, box-shadow 0.3s;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .news-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            }
+            
+            .news-image-container {
+                width: 100%;
+                height: 200px;
+                overflow: hidden;
+            }
+            
+            .news-image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.3s;
+            }
+            
+            .news-card:hover .news-image {
+                transform: scale(1.05);
+            }
+            
+            .news-title {
+                font-size: 2rem;
+                margin: 1.5rem 2rem 1rem;
+                color: #000000;
+                text-decoration: none;
+                font-weight: 600;
+            }
+            
+            .news-title:hover {
+                color: #ff2702;
+            }
+            
+            .news-meta {
+                display: flex;
+                justify-content: space-between;
+                margin: 0 2rem 1.5rem;
+                font-size: 1.4rem;
+                color: #aaa;
+            }
+            
+            .news-link {
+                align-self: flex-start;
+                background-color: #ff2702;
+                color: white;
+                padding: 1rem 2rem;
+                border-radius: 4px;
+                text-decoration: none;
+                font-size: 1.4rem;
+                transition: background-color 0.3s;
+                margin: 0 2rem 2rem;
+            }
+            
+            .news-link:hover {
+                background-color: #d62200;
+            }
+            
+            .loading-indicator, .error-message {
+                grid-column: 1 / -1;
+                text-align: center;
+                font-size: 1.8rem;
+                padding: 2rem;
+            }
+            
+            .error-message {
+                color: #ff2702;
+            }
+            
+            @media (max-width: 768px) {
+                .news-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+            
+            .medium-card {
+                border-left: 3px solid #03a87c;
+            }
+            
+            .medium-badge {
+                background-color: #03a87c;
+                color: white;
+                padding: 0.2rem 0.5rem;
+                border-radius: 3px;
+                margin-left: 0.5rem;
+                font-size: 1.2rem;
+            }
+        </style>
+    </head>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9EGVJW1TZT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-9EGVJW1TZT');
+    </script>
+
+    <!-- Start of HubSpot Embed Code -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/48299015.js"></script>
+    <!-- End of HubSpot Embed Code -->
+    
+    <body>
+        <!-- Header will be inserted here by JavaScript -->
+
+        <section class="hero-section">
+            <div class="hero-section-content">
+                <h1 class="hero-title">DeepTempo News</h1>
+                <p class="hero-subtitle">Latest updates, press releases, and media coverage</p>
+            </div>
+        </section>
+
+        <section class="news-container">
+            <div class="news-grid" id="news-grid">
+                <!-- News articles will be loaded here dynamically -->
+                <div class="loading-indicator">Loading news articles...</div>
+            </div>
+        </section>
+        
+        <!-- Footer will be inserted here by JavaScript -->
+
+        <!-- Include the header and footer components -->
+        <script src="js/header-component.js"></script>
+        <script src="js/footer-component.js"></script>
+
+        <script src="js/medium-fetcher.js"></script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Create loading indicator
+                const newsGrid = document.getElementById('news-grid');
+                newsGrid.innerHTML = '<div class="loading-indicator">Loading news articles...</div>';
+                
+                // Fetch both regular news articles and Medium articles
+                Promise.all([
+                    fetch('data/news-articles.json').then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    }),
+                    new MediumFetcher('deeptempo').fetchArticles()
+                ])
+                .then(([newsArticles, mediumArticles]) => {
+                    // Combine both types of articles
+                    const allArticles = [...newsArticles, ...mediumArticles];
+                    displayNewsArticles(allArticles);
+                })
+                .catch(error => {
+                    console.error('Error fetching articles:', error);
+                    document.getElementById('news-grid').innerHTML = 
+                        '<div class="error-message">Unable to load news articles. Please try again later.</div>';
+                });
+                
+                // Function to display the news articles
+                function displayNewsArticles(articles) {
+                    const newsGrid = document.getElementById('news-grid');
+                    
+                    // Clear loading indicator
+                    newsGrid.innerHTML = '';
+                    
+                    // Sort articles by date (newest first)
+                    articles.sort((a, b) => new Date(b.date) - new Date(a.date));
+                    
+                    // Create HTML for each article
+                    articles.forEach(article => {
+                        // Format the date
+                        const dateObj = new Date(article.date);
+                        const formattedDate = dateObj.toLocaleDateString('en-US', {
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric'
+                        });
+                        
+                        // Add a badge for Medium articles
+                        const mediumBadge = article.isMedium ? 
+                            `<span class="medium-badge"><i class="fab fa-medium"></i> Blog</span>` : '';
+                        
+                        const articleHTML = `
+                            <div class="news-card ${article.isMedium ? 'medium-card' : ''}">
+                                ${article.image ? `<div class="news-image-container">
+                                    <img src="${article.image}" alt="${article.title}" class="news-image">
+                                </div>` : ''}
+                                <a href="${article.url}" target="_blank" class="news-title">${article.title}</a>
+                                <div class="news-meta">
+                                    <span class="news-date">${formattedDate}</span>
+                                    <span class="news-source">${article.source} ${mediumBadge}</span>
+                                </div>
+                                <a href="${article.url}" target="_blank" class="news-link">Read Article</a>
+                            </div>
+                        `;
+                        
+                        newsGrid.innerHTML += articleHTML;
+                    });
+                }
+            });
+        </script>
+    </body>
+</html> 

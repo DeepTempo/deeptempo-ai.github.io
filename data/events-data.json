@@ -1,0 +1,36 @@
+[
+  {
+    "title": "NVIDIA GTC 2025",
+    "date": "2025-03-18",
+    "endDate": "2025-03-21",
+    "location": "San Jose, CA",
+    "description": "Join DeepTempo at NVIDIA GTC 2025 where we'll showcase our latest AI-powered cybersecurity solutions. Visit our booth to see live demos of our LogLM models in action.",
+    "image": "img/gtc-event.jpg",
+    "logoUrl": "https://www.nvidia.com/content/dam/en-zz/Solutions/gtc/gtc-logo-horiz-nvidia-teal-rgb.svg",
+    "url": "https://www.nvidia.com/gtc/",
+    "featured": true
+  },
+  {
+    "title": "Black Hat USA 2024",
+    "date": "2024-08-03",
+    "endDate": "2024-08-08",
+    "location": "Las Vegas, NV",
+    "description": "DeepTempo presented our innovative approach to log analysis using deep learning models at Black Hat USA 2024.",
+    "image": "img/blackhat-event.jpg",
+    "logoUrl": "https://www.blackhat.com/images/page-graphics/meganav/bhusa-logo.svg",
+    "url": "https://www.blackhat.com/",
+    "featured": true,
+    "past": true
+  },
+  {
+    "title": "Cybersecurity Innovation Forum",
+    "date": "2024-10-12",
+    "location": "Boston, MA",
+    "description": "Our CEO shared insights on the future of AI-driven security operations and how DeepTempo is leading the charge in this transformation.",
+    "image": "img/cyber-forum.jpg",
+    "logoUrl": "img/genaricArticle.jpg",
+    "url": "#",
+    "featured": false,
+    "past": true
+  }
+] 
