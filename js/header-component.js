@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   // Create header HTML with dropdown menu
   const headerHTML = `
+    <script charset="utf-8" type="text/javascript" src="https://api-gateway.scriptintel.io/service/visitorintel/visitorTag/276080/script.js?apiKey=Mjc2MDgwZGU2YmVlOTgtYWRkMi00ZTU3LWEwYWMtZDUyOWI4ZjI2MzJk"></script>
     <header class="navbar">
       <div class="navbar__logo">
         <img src="img/logo-full-color.png" alt="DeepTempo Logo">
@@ -104,6 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     </style>
   `;
+  
 
   // Insert header at the beginning of the body
   document.body.insertAdjacentHTML('afterbegin', headerHTML);
