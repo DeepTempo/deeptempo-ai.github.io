@@ -23,6 +23,17 @@
     "past": false
   },
   {
+    "title": "Snowflake Summit 2025",
+    "date": "2025-06-02",
+    "endDate": "2025-06-05",
+    "location": "San Francisco, CA",
+    "description": "Snowflake Summit is fast approaching 2025.  We look forward to seeing the people who use our Native App and connecting with those who don't.",
+    "logoUrl": "https://publish-p57963-e462109.adobeaemcloud.com/content/experience-fragments/snowflake-site/language-masters/en/site/summit-navigation/summit-navigation/_jcr_content/root/container_1747145127/flexible_column_cont/flexible_column_content_container_1/image.coreimg.svg/1731425669883/snowflake-summit-logo-horizontal-blue.svg",
+    "url": "https://www.snowflake.com/en/summit/?utm_source=zoom&utm_medium=referral",
+    "featured": true,
+    "past": false
+  },
+  {
     "title": "RSAC 2025",
     "date": "2025-04-28",
     "endDate": "2025-05-01",
