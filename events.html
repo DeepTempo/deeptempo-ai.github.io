@@ -207,11 +207,16 @@
             document.addEventListener('DOMContentLoaded', function() {
                 // Function to format date range
                 function formatDateRange(startDate, endDate) {
+                    // Add one day to both start and end dates
                     const start = new Date(startDate);
+                    start.setDate(start.getDate() + 1); // Add one day to start date
+                    
                     const options = { year: 'numeric', month: 'long', day: 'numeric' };
                     
                     if (endDate) {
                         const end = new Date(endDate);
+                        end.setDate(end.getDate() + 1); // Add one day to end date
+                        
                         if (start.getMonth() === end.getMonth() && start.getFullYear() === end.getFullYear()) {
                             // Same month and year
                             return `${start.toLocaleDateString('en-US', { month: 'long', day: 'numeric' })} - ${end.getDate()}, ${end.getFullYear()}`;
@@ -230,19 +235,13 @@
                     const upcomingEventsGrid = document.getElementById('upcoming-events-grid');
                     const pastEventsGrid = document.getElementById('past-events-grid');
                     
-                    // Fix: Use date without time component to avoid timezone issues
                     const currentDate = new Date();
-                    currentDate.setHours(0, 0, 0, 0);
-                    
                     let upcomingEvents = [];
                     let pastEvents = [];
                     
                     // Sort events into upcoming and past
                     eventsData.forEach(event => {
-                        // Fix: Create date object and reset time component to avoid timezone issues
                         const eventDate = new Date(event.date);
-                        eventDate.setHours(0, 0, 0, 0);
-                        
                         if (event.past || eventDate < currentDate) {
                             pastEvents.push(event);
                         } else {
@@ -250,23 +249,11 @@
                         }
                     });
                     
-                    // Fix: Sort upcoming events by date (soonest first) with normalized dates
-                    upcomingEvents.sort((a, b) => {
-                        const dateA = new Date(a.date);
-                        const dateB = new Date(b.date);
-                        dateA.setHours(0, 0, 0, 0);
-                        dateB.setHours(0, 0, 0, 0);
-                        return dateA - dateB;
-                    });
+                    // Sort upcoming events by date (soonest first)
+                    upcomingEvents.sort((a, b) => new Date(a.date) - new Date(b.date));
                     
-                    // Fix: Sort past events by date (most recent first) with normalized dates
-                    pastEvents.sort((a, b) => {
-                        const dateA = new Date(a.date);
-                        const dateB = new Date(b.date);
-                        dateA.setHours(0, 0, 0, 0);
-                        dateB.setHours(0, 0, 0, 0);
-                        return dateB - dateA;
-                    });
+                    // Sort past events by date (most recent first)
+                    pastEvents.sort((a, b) => new Date(b.date) - new Date(a.date));
                     
                     // Display upcoming events
                     if (upcomingEvents.length > 0) {
