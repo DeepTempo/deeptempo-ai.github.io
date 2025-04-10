@@ -230,13 +230,19 @@
                     const upcomingEventsGrid = document.getElementById('upcoming-events-grid');
                     const pastEventsGrid = document.getElementById('past-events-grid');
                     
+                    // Fix: Use date without time component to avoid timezone issues
                     const currentDate = new Date();
+                    currentDate.setHours(0, 0, 0, 0);
+                    
                     let upcomingEvents = [];
                     let pastEvents = [];
                     
                     // Sort events into upcoming and past
                     eventsData.forEach(event => {
+                        // Fix: Create date object and reset time component to avoid timezone issues
                         const eventDate = new Date(event.date);
+                        eventDate.setHours(0, 0, 0, 0);
+                        
                         if (event.past || eventDate < currentDate) {
                             pastEvents.push(event);
                         } else {
