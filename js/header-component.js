@@ -20,18 +20,15 @@ document.addEventListener('DOMContentLoaded', function() {
               <li><a href="LogLM_ML.html" class="dropdown-item" id="nav-loglm">vs ML/UEBA</a></li>
               <li><a href="snowflake.html" class="dropdown-item">Snowflake Native App</a></li>
               <li><a href="openness.html" class="dropdown-item">Openness</a></li>
+              <li><a href="whitepaper.html" class="dropdown-item" id="nav-whitepaper">Whitepaper</a></li>
             </ul>
           </li>
           <li class="navbar__item"><a href="news.html" class="navbar__link" id="nav-news">News</a></li>
           <li class="navbar__item"><a href="events.html" class="navbar__link" id="nav-events">Events</a></li>
           <li class="navbar__item"><a href="http://docs.deeptempo.ai/" target="_blank" class="navbar__link">Documentation</a></li>
-          <li class="navbar__item dropdown">
-            <a href="about-us.html" class="navbar__link" id="nav-about">About Us <i class="fas fa-chevron-down" style="font-size: 1.2rem; margin-left: 5px;"></i></a>
-            <ul class="dropdown-menu">
-              <li><a href="about-us.html" class="dropdown-item">Company</a></li>
-              <li><a href="whitepaper.html" class="dropdown-item" id="nav-whitepaper">Whitepapers</a></li>
-            </ul>
-          </li>
+
+          <li class="navbar__item"><a href="about-us.html" class="navbar__link" id="nav-about">About Us</a></li>
+
           <li class="navbar__item"><a href="contact-us.html" class="navbar__link" id="nav-contact">Contact Us</a></li>
         </ul>
         <div class="navbar__close" id="close-menu">&times;</div>
