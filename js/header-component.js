@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
               <li><a href="product.html" class="dropdown-item">Overview</a></li>
               <li><a href="LogLM_ML.html" class="dropdown-item" id="nav-loglm">vs ML/UEBA</a></li>
               <li><a href="snowflake.html" class="dropdown-item">Snowflake Native App</a></li>
-              <li><a href="openness.html" class="dropdown-item">Openness</a></li>
               <li><a href="whitepaper.html" class="dropdown-item" id="nav-whitepaper">Whitepaper</a></li>
             </ul>
           </li>
