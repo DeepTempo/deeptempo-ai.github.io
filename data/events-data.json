@@ -20,7 +20,7 @@
     "logoUrl": "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=2036,h=1358,fit=crop/AQEVaMMM9Gt1VRn1/logobanner-25-YBgyQ7aWjnSBbg4x.png",
     "url": "https://www.hackthebay.org/",
     "featured": true,
-    "past": false
+    "past": true
   },
   {
     "title": "AI, Security + SciFi Bites & Cocktails during RSAC25",
@@ -31,7 +31,7 @@
     "logoUrl": "https://images.lumacdn.com/cdn-cgi/image/format=auto,fit=cover,dpr=2,background=white,quality=75,width=400,height=400/event-covers/t3/6dca29d2-d407-4842-a85b-c96fd7cbd307.png",
     "url": "https://lu.ma/6tlhfrvg",
     "featured": true,
-    "past": false
+    "past": true
   },
   {
     "title": "Snowflake Summit 2025",
@@ -53,7 +53,7 @@
     "logoUrl": "https://www.rsaconference.com/-/media/project/rsac/rsac-website/rsa-conference-logos/2025/rsaclogotaglinewhitegreen158x68.svg",
     "url": "https://www.rsaconference.com/usa?utm_paid_source=googleads&utm_paid_campaign=North%20America%20-%20Brand%20-%20North%20America&utm_paid_content=brand&utm_paid_term=rsac%20conference%202025&gad_source=1&gclid=CjwKCAjwktO_BhBrEiwAV70jXh2NbzdZ25sLso0kvdrJcYuNPzf0SzY3s3e7V8l02UxhZV39rtbWxBoC6z8QAvD_BwE/",
     "featured": true,
-    "past": false
+    "past": true
   },
   {
     "title": "BsidesSF 2025",
@@ -64,7 +64,7 @@
     "image": "img/bsides2025.png",    
     "url": "https://bsidessf.org/",
     "featured": true,
-    "past": false
+    "past": true
   },
   {
     "title": "Black Hat USA 2024",
